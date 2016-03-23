@@ -3,31 +3,37 @@
   <head>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
-      google.charts.load('current', {'packages':['corechart']});
+      google.charts.load('current', {'packages':['sankey']});
       google.charts.setOnLoadCallback(drawChart);
-      function drawChart() {
 
-        var data = google.visualization.arrayToDataTable([
-          ['Task', 'Hours per Day'],
-          ['Work',     11],
-          ['Eat',      2],
-          ['Commute',  2],
-          ['Watch TV', 2],
-          ['Sleep',    7]
+      function drawChart() {
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'From');
+        data.addColumn('string', 'To');
+        data.addColumn('number', 'Weight');
+        data.addRows([
+          [ 'A', 'X', 5 ],
+          [ 'A', 'Y', 7 ],
+          [ 'A', 'Z', 0.001 ],
+          [ 'X', 'B', 2 ],
+          [ 'Y', 'B', 9 ],
+          [ 'Z', 'B', 4 ]
         ]);
 
+        // Sets chart options.
         var options = {
-          title: 'My Daily Activities'
+          width: 600,
         };
 
-        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
-
+        // Instantiates and draws our chart, passing in some options.
+        var chart = new google.visualization.Sankey(document.getElementById('sankey_basic'));
         chart.draw(data, options);
       }
     </script>
   </head>
   <body>
-    <div id="piechart" style="width: 900px; height: 500px;"></div>
+    <div id="sankey_basic" style="width: 900px; height: 300px;"></div>
   </body>
 </html>
+
 
