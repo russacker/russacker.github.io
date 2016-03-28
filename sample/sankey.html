@@ -11,12 +11,31 @@
         data.addColumn('string', 'To');
         data.addColumn('number', 'Weight');
         data.addRows([
-          [ 'A', 'X', 5 ],
-          [ 'A', 'Y', 7 ],
-          [ 'A', 'Z', 0.001 ],
-          [ 'X', 'B', 2 ],
-          [ 'Y', 'B', 9 ],
-          [ 'Z', 'B', 4 ]
+          [ 'F12-BioE', 'S13-BioE', 85 ],
+[ 'F12-BioE', 'S13-EECS', 2 ],
+[ 'F12-BioE', 'S13-IEOR', 3 ],
+[ 'F12-BioE', 'S13-Degree', 2 ],
+[ 'F12-BioE', 'S13-NoEnroll', 3 ],
+[ 'S13-BioE', 'F13-BioE', 2 ],
+[ 'S13-BioE', 'F13-EECS', 1 ],
+[ 'S13-BioE', 'F13-IEOR', 1 ],
+[ 'S13-BioE', 'F13-Degree', 80 ],
+[ 'S13-BioE', 'F13-NoEnroll', 0 ],
+[ 'S13-EECS', 'F13-BioE', 0 ],
+[ 'S13-EECS', 'F13-EECS', 1 ],
+[ 'S13-EECS', 'F13-IEOR', 0 ],
+[ 'S13-EECS', 'F13-Degree', 1 ],
+[ 'S13-EECS', 'F13-NoEnroll', 0 ],
+[ 'S13-IEOR', 'F13-BioE', 0 ],
+[ 'S13-IEOR', 'F13-EECS', 1 ],
+[ 'S13-IEOR', 'F13-IEOR', 1 ],
+[ 'S13-IEOR', 'F13-Degree', 1 ],
+[ 'S13-IEOR', 'F13-NoEnroll', 0 ],
+[ 'S13-NoEnroll', 'F13-BioE', 1 ],
+[ 'S13-NoEnroll', 'F13-EECS', 0 ],
+[ 'S13-NoEnroll', 'F13-IEOR', 0 ],
+[ 'S13-NoEnroll', 'F13-Degree', 0 ],
+[ 'S13-NoEnroll', 'F13-NoEnroll', 2 ]
         ]);
         // Sets chart options.
         var options = {
