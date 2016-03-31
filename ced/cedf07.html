@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['sankey']});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'From');
+        data.addColumn('string', 'To');
+        data.addColumn('number', 'Weight');
+        data.addRows([
+[ 'F07-Architecture', 'S09-Architecture', 1],	[ 'S09-Architecture', 'S11-Architecture', 1],	[ 'S11-Architecture', 'S12-Not Enrolled', 1],
+[ 'F07-Architecture', 'S09-Architecture', 1],	[ 'S09-Architecture', 'S11-Architecture', 1],	[ 'S11-Architecture', 'S12-Not Enrolled', 1],
+[ 'F07-Architecture', 'S09-Architecture', 2],	[ 'S09-Architecture', 'S11-Not Enrolled', 2],	[ 'S11-Not Enrolled', 'S12-Not Enrolled', 2],
+[ 'F07-Architecture', 'S09-Architecture', 2],	[ 'S09-Architecture', 'S11-Not Enrolled', 2],	[ 'S11-Not Enrolled', 'S12-Not Enrolled', 2],
+[ 'F07-Architecture', 'S09-Architecture', 1],	[ 'S09-Architecture', 'S11-Urban Studies', 1],	[ 'S11-Urban Studies', 'S12-Not Enrolled', 1],
+[ 'F07-Architecture', 'S09-Civil Engineering', 1],	[ 'S09-Civil Engineering', 'S11-Not Enrolled', 1],	[ 'S11-Not Enrolled', 'S12-Not Enrolled', 1],
+[ 'F07-Architecture', 'S09-Not Enrolled', 1],	[ 'S09-Not Enrolled', 'S11-Not Enrolled', 1],	[ 'S11-Not Enrolled', 'S12-Not Enrolled', 1],
+[ 'F07-Architecture', 'S09-Not Enrolled', 1],	[ 'S09-Not Enrolled', 'S11-Not Enrolled', 1],	[ 'S11-Not Enrolled', 'S12-Not Enrolled', 1],
+[ 'F07-Architecture', 'S09-Architecture', 1],	[ 'S09-Architecture', 'S11-Not Enrolled', 1],	[ 'S11-Not Enrolled', 'S12-Architecture', 1],
+[ 'F07-Architecture', 'S09-Not Enrolled', 1],	[ 'S09-Not Enrolled', 'S11-Not Enrolled', 1],	[ 'S11-Not Enrolled', 'S12-Not Enrolled', 1],
+[ 'F07-Landscape Architecture', 'S09-Landscape Architecture', 1],	[ 'S09-Landscape Architecture', 'S11-Not Enrolled', 1],	[ 'S11-Not Enrolled', 'S12-Social Welfare', 1],
+[ 'F07-Architecture', 'S09-Graduated', 1],	[ 'S09-Graduated', 'S11-Graduated', 1],	[ 'S11-Graduated', 'S12-Graduated', 1],
+[ 'F07-Architecture', 'S09-Architecture', 3],	[ 'S09-Architecture', 'S11-Graduated', 3],	[ 'S11-Graduated', 'S12-Graduated', 3],
+[ 'F07-Architecture', 'S09-Economics', 2],	[ 'S09-Economics', 'S11-Graduated', 2],	[ 'S11-Graduated', 'S12-Graduated', 2],
+[ 'F07-Architecture', 'S09-Multiple Majors', 1],	[ 'S09-Multiple Majors', 'S11-Graduated', 1],	[ 'S11-Graduated', 'S12-Graduated', 1],
+[ 'F07-Landscape Architecture', 'S09-Landscape Architecture', 1],	[ 'S09-Landscape Architecture', 'S11-Graduated', 1],	[ 'S11-Graduated', 'S12-Graduated', 1],
+[ 'F07-Urban Studies', 'S09-Urban Studies', 1],	[ 'S09-Urban Studies', 'S11-Graduated', 1],	[ 'S11-Graduated', 'S12-Graduated', 1],
+[ 'F07-Architecture', 'S09-Architecture', 7],	[ 'S09-Architecture', 'S11-Graduated', 7],	[ 'S11-Graduated', 'S12-Graduated', 7],
+[ 'F07-Architecture', 'S09-Architecture', 1],	[ 'S09-Architecture', 'S11-Graduated', 1],	[ 'S11-Graduated', 'S12-Graduated', 1],
+[ 'F07-Architecture', 'S09-Industrial Eng & Ops Rsch', 1],	[ 'S09-Industrial Eng & Ops Rsch', 'S11-Graduated', 1],	[ 'S11-Graduated', 'S12-Graduated', 1],
+[ 'F07-Architecture', 'S09-Social Welfare', 1],	[ 'S09-Social Welfare', 'S11-Graduated', 1],	[ 'S11-Graduated', 'S12-Graduated', 1],
+[ 'F07-Urban Studies', 'S09-Peace & Conflict Studies', 1],	[ 'S09-Peace & Conflict Studies', 'S11-Graduated', 1],	[ 'S11-Graduated', 'S12-Graduated', 1],
+[ 'F07-Architecture', 'S09-Architecture', 53],	[ 'S09-Architecture', 'S11-Graduated', 53],	[ 'S11-Graduated', 'S12-Graduated', 53],
+[ 'F07-Architecture', 'S09-Architecture', 1],	[ 'S09-Architecture', 'S11-Graduated', 1],	[ 'S11-Graduated', 'S12-Graduated', 1],
+[ 'F07-Architecture', 'S09-Architecture', 1],	[ 'S09-Architecture', 'S11-Graduated', 1],	[ 'S11-Graduated', 'S12-Graduated', 1],
+[ 'F07-Architecture', 'S09-Architecture', 2],	[ 'S09-Architecture', 'S11-Graduated', 2],	[ 'S11-Graduated', 'S12-Graduated', 2],
+[ 'F07-Architecture', 'S09-Architecture', 1],	[ 'S09-Architecture', 'S11-Graduated', 1],	[ 'S11-Graduated', 'S12-Graduated', 1],
+[ 'F07-Architecture', 'S09-Architecture', 1],	[ 'S09-Architecture', 'S11-Graduated', 1],	[ 'S11-Graduated', 'S12-Graduated', 1],
+[ 'F07-Architecture', 'S09-Architecture', 3],	[ 'S09-Architecture', 'S11-Graduated', 3],	[ 'S11-Graduated', 'S12-Graduated', 3],
+[ 'F07-Architecture', 'S09-Architecture', 2],	[ 'S09-Architecture', 'S11-Graduated', 2],	[ 'S11-Graduated', 'S12-Graduated', 2],
+[ 'F07-Architecture', 'S09-Architecture', 1],	[ 'S09-Architecture', 'S11-Graduated', 1],	[ 'S11-Graduated', 'S12-Graduated', 1],
+[ 'F07-Architecture', 'S09-Architecture', 1],	[ 'S09-Architecture', 'S11-Graduated', 1],	[ 'S11-Graduated', 'S12-Graduated', 1],
+[ 'F07-Architecture', 'S09-Architecture', 1],	[ 'S09-Architecture', 'S11-Graduated', 1],	[ 'S11-Graduated', 'S12-Graduated', 1],
+[ 'F07-Architecture', 'S09-Architecture', 1],	[ 'S09-Architecture', 'S11-Graduated', 1],	[ 'S11-Graduated', 'S12-Graduated', 1],
+[ 'F07-Architecture', 'S09-Architecture', 2],	[ 'S09-Architecture', 'S11-Graduated', 2],	[ 'S11-Graduated', 'S12-Graduated', 2],
+[ 'F07-Architecture', 'S09-Architecture', 1],	[ 'S09-Architecture', 'S11-Graduated', 1],	[ 'S11-Graduated', 'S12-Graduated', 1],
+[ 'F07-Architecture', 'S09-Architecture', 4],	[ 'S09-Architecture', 'S11-Graduated', 4],	[ 'S11-Graduated', 'S12-Graduated', 4],
+[ 'F07-Architecture', 'S09-Letters & Sci Undeclared', 1],	[ 'S09-Letters & Sci Undeclared', 'S11-Graduated', 1],	[ 'S11-Graduated', 'S12-Graduated', 1],
+[ 'F07-Architecture', 'S09-Letters & Sci Undeclared', 1],	[ 'S09-Letters & Sci Undeclared', 'S11-Graduated', 1],	[ 'S11-Graduated', 'S12-Graduated', 1],
+[ 'F07-Architecture', 'S09-Letters & Sci Undeclared', 1],	[ 'S09-Letters & Sci Undeclared', 'S11-Graduated', 1],	[ 'S11-Graduated', 'S12-Graduated', 1],
+[ 'F07-Architecture', 'S09-Civil Engineering', 2],	[ 'S09-Civil Engineering', 'S11-Graduated', 2],	[ 'S11-Graduated', 'S12-Graduated', 2],
+[ 'F07-Architecture', 'S09-Economics', 1],	[ 'S09-Economics', 'S11-Graduated', 1],	[ 'S11-Graduated', 'S12-Graduated', 1],
+[ 'F07-Architecture', 'S09-Economics', 1],	[ 'S09-Economics', 'S11-Graduated', 1],	[ 'S11-Graduated', 'S12-Graduated', 1],
+[ 'F07-Architecture', 'S09-Letters & Sci Undeclared', 1],	[ 'S09-Letters & Sci Undeclared', 'S11-Graduated', 1],	[ 'S11-Graduated', 'S12-Graduated', 1],
+[ 'F07-Architecture', 'S09-Letters & Sci Undeclared', 1],	[ 'S09-Letters & Sci Undeclared', 'S11-Graduated', 1],	[ 'S11-Graduated', 'S12-Graduated', 1],
+[ 'F07-Architecture', 'S09-Letters & Sci Undeclared', 1],	[ 'S09-Letters & Sci Undeclared', 'S11-Graduated', 1],	[ 'S11-Graduated', 'S12-Graduated', 1],
+[ 'F07-Architecture', 'S09-Mechanical Engineering', 2],	[ 'S09-Mechanical Engineering', 'S11-Graduated', 2],	[ 'S11-Graduated', 'S12-Graduated', 2],
+[ 'F07-Architecture', 'S09-Architecture', 1],	[ 'S09-Architecture', 'S11-Graduated', 1],	[ 'S11-Graduated', 'S12-Graduated', 1],
+[ 'F07-Architecture', 'S09-Astrophysics', 1],	[ 'S09-Astrophysics', 'S11-Graduated', 1],	[ 'S11-Graduated', 'S12-Graduated', 1],
+[ 'F07-Architecture', 'S09-Letters & Sci Undeclared', 1],	[ 'S09-Letters & Sci Undeclared', 'S11-Graduated', 1],	[ 'S11-Graduated', 'S12-Graduated', 1],
+[ 'F07-Architecture', 'S09-Letters & Sci Undeclared', 1],	[ 'S09-Letters & Sci Undeclared', 'S11-Graduated', 1],	[ 'S11-Graduated', 'S12-Graduated', 1],
+[ 'F07-Architecture', 'S09-Sociology', 1],	[ 'S09-Sociology', 'S11-Graduated', 1],	[ 'S11-Graduated', 'S12-Graduated', 1],
+[ 'F07-Landscape Architecture', 'S09-Landscape Architecture', 1],	[ 'S09-Landscape Architecture', 'S11-Graduated', 1],	[ 'S11-Graduated', 'S12-Graduated', 1],
+[ 'F07-Landscape Architecture', 'S09-Landscape Architecture', 5],	[ 'S09-Landscape Architecture', 'S11-Graduated', 5],	[ 'S11-Graduated', 'S12-Graduated', 5],
+[ 'F07-Urban Studies', 'S09-Urban Studies', 1],	[ 'S09-Urban Studies', 'S11-Graduated', 1],	[ 'S11-Graduated', 'S12-Graduated', 1],
+[ 'F07-Urban Studies', 'S09-Urban Studies', 1],	[ 'S09-Urban Studies', 'S11-Graduated', 1],	[ 'S11-Graduated', 'S12-Graduated', 1],
+[ 'F07-Architecture', 'S09-Architecture', 1],	[ 'S09-Architecture', 'S11-Architecture', 1],	[ 'S11-Architecture', 'S12-Graduated', 1],
+[ 'F07-Architecture', 'S09-Architecture', 1],	[ 'S09-Architecture', 'S11-Multiple Majors', 1],	[ 'S11-Multiple Majors', 'S12-Graduated', 1],
+[ 'F07-Architecture', 'S09-Architecture', 1],	[ 'S09-Architecture', 'S11-Multiple Majors', 1],	[ 'S11-Multiple Majors', 'S12-Graduated', 1],
+[ 'F07-Architecture', 'S09-Architecture', 1],	[ 'S09-Architecture', 'S11-Multiple Majors', 1],	[ 'S11-Multiple Majors', 'S12-Graduated', 1],
+[ 'F07-Architecture', 'S09-Architecture', 1],	[ 'S09-Architecture', 'S11-Civil Engineering', 1],	[ 'S11-Civil Engineering', 'S12-Graduated', 1],
+[ 'F07-Architecture', 'S09-Architecture', 1],	[ 'S09-Architecture', 'S11-Economics', 1],	[ 'S11-Economics', 'S12-Graduated', 1],
+[ 'F07-Architecture', 'S09-Architecture', 1],	[ 'S09-Architecture', 'S11-Multiple Majors', 1],	[ 'S11-Multiple Majors', 'S12-Graduated', 1],
+[ 'F07-Architecture', 'S09-Architecture', 1],	[ 'S09-Architecture', 'S11-Multiple Majors', 1],	[ 'S11-Multiple Majors', 'S12-Graduated', 1],
+[ 'F07-Architecture', 'S09-Architecture', 1],	[ 'S09-Architecture', 'S11-Multiple Majors', 1],	[ 'S11-Multiple Majors', 'S12-Graduated', 1],
+[ 'F07-Architecture', 'S09-Letters & Sci Undeclared', 1],	[ 'S09-Letters & Sci Undeclared', 'S11-Rhetoric', 1],	[ 'S11-Rhetoric', 'S12-Graduated', 1],
+[ 'F07-Urban Studies', 'S09-Urban Studies', 1],	[ 'S09-Urban Studies', 'S11-Multiple Majors', 1],	[ 'S11-Multiple Majors', 'S12-Graduated', 1],
+[ 'F07-Architecture', 'S09-Architecture', 1],	[ 'S09-Architecture', 'S11-Architecture', 1],	[ 'S11-Architecture', 'S12-Graduated', 1],
+[ 'F07-Architecture', 'S09-Architecture', 1],	[ 'S09-Architecture', 'S11-Architecture', 1],	[ 'S11-Architecture', 'S12-Graduated', 1],
+[ 'F07-Architecture', 'S09-Architecture', 1],	[ 'S09-Architecture', 'S11-Nut Sci-Physio & Metabol', 1],	[ 'S11-Nut Sci-Physio & Metabol', 'S12-Graduated', 1],
+[ 'F07-Architecture', 'S09-Architecture', 1],	[ 'S09-Architecture', 'S11-Letters & Sci Undeclared', 1],	[ 'S11-Letters & Sci Undeclared', 'S12-Graduated', 1],
+[ 'F07-Architecture', 'S09-Economics', 1],	[ 'S09-Economics', 'S11-Business Administration', 1],	[ 'S11-Business Administration', 'S12-Graduated', 1],
+[ 'F07-Architecture', 'S09-Letters & Sci Undeclared', 1],	[ 'S09-Letters & Sci Undeclared', 'S11-Legal Studies', 1],	[ 'S11-Legal Studies', 'S12-Graduated', 1],
+[ 'F07-Architecture', 'S09-Letters & Sci Undeclared', 1],	[ 'S09-Letters & Sci Undeclared', 'S11-Political Science', 1],	[ 'S11-Political Science', 'S12-Graduated', 1],
+[ 'F07-Architecture', 'S09-Architecture', 1],	[ 'S09-Architecture', 'S11-Architecture', 1],	[ 'S11-Architecture', 'S12-Not Enrolled', 1],
+[ 'F07-Architecture', 'S09-Architecture', 1],	[ 'S09-Architecture', 'S11-Architecture', 1],	[ 'S11-Architecture', 'S12-Not Enrolled', 1]
+        ]);
+        // Sets chart options.
+        var options = {
+          width: 1600,
+        };
+        // Instantiates and draws our chart, passing in some options.
+        var chart = new google.visualization.Sankey(document.getElementById('sankey_basic'));
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <h2>Clg of Environmental Design - Fall 2007 Entering New Freshmen</h2>
+    <h3>Fall 2007 -> Fall 2008 -> Fall 2009 -> Spring 2011</h3>
+    <div id="sankey_basic" style="width: 1700px; height: 600px;"></div>
+  </body>
+</html>
