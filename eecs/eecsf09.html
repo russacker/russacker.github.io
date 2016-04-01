@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['sankey']});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'From');
+        data.addColumn('string', 'To');
+        data.addColumn('number', 'Weight');
+        data.addRows([
+[ 'F09-Electrical Eng & Comp Sci', 'F10-Electrical Eng & Comp Sci', 1],	[ 'F10-Electrical Eng & Comp Sci', 'F11-Electrical Eng & Comp Sci', 1],	[ 'F11-Electrical Eng & Comp Sci', 'S13-Electrical Eng & Comp Sci', 1],	[ 'S13-Electrical Eng & Comp Sci', 'S15-Not Enrolled', 1],
+[ 'F09-Electrical Eng & Comp Sci', 'F10-Electrical Eng & Comp Sci', 1],	[ 'F10-Electrical Eng & Comp Sci', 'F11-Electrical Eng & Comp Sci', 1],	[ 'F11-Electrical Eng & Comp Sci', 'S13-Electrical Eng & Comp Sci', 1],	[ 'S13-Electrical Eng & Comp Sci', 'S15-Not Enrolled', 1],
+[ 'F09-Other Major', 'F10-Electrical Eng & Comp Sci', 1],	[ 'F10-Electrical Eng & Comp Sci', 'F11-Not Enrolled', 1],	[ 'F11-Not Enrolled', 'S13-Electrical Eng & Comp Sci', 1],	[ 'S13-Electrical Eng & Comp Sci', 'S15-Not Enrolled', 1],
+[ 'F09-Electrical Eng & Comp Sci', 'F10-Electrical Eng & Comp Sci', 1],	[ 'F10-Electrical Eng & Comp Sci', 'F11-Electrical Eng & Comp Sci', 1],	[ 'F11-Electrical Eng & Comp Sci', 'S13-Not Enrolled', 1],	[ 'S13-Not Enrolled', 'S15-Not Enrolled', 1],
+[ 'F09-Electrical Eng & Comp Sci', 'F10-Electrical Eng & Comp Sci', 1],	[ 'F10-Electrical Eng & Comp Sci', 'F11-Electrical Eng & Comp Sci', 1],	[ 'F11-Electrical Eng & Comp Sci', 'S13-Not Enrolled', 1],	[ 'S13-Not Enrolled', 'S15-Not Enrolled', 1],
+[ 'F09-Electrical Eng & Comp Sci', 'F10-Electrical Eng & Comp Sci', 1],	[ 'F10-Electrical Eng & Comp Sci', 'F11-Electrical Eng & Comp Sci', 1],	[ 'F11-Electrical Eng & Comp Sci', 'S13-Not Enrolled', 1],	[ 'S13-Not Enrolled', 'S15-Not Enrolled', 1],
+[ 'F09-Electrical Eng & Comp Sci', 'F10-Electrical Eng & Comp Sci', 1],	[ 'F10-Electrical Eng & Comp Sci', 'F11-Not Enrolled', 1],	[ 'F11-Not Enrolled', 'S13-Not Enrolled', 1],	[ 'S13-Not Enrolled', 'S15-Not Enrolled', 1],
+[ 'F09-Electrical Eng & Comp Sci', 'F10-Electrical Eng & Comp Sci', 2],	[ 'F10-Electrical Eng & Comp Sci', 'F11-Not Enrolled', 2],	[ 'F11-Not Enrolled', 'S13-Not Enrolled', 2],	[ 'S13-Not Enrolled', 'S15-Not Enrolled', 2],
+[ 'F09-Electrical Eng & Comp Sci', 'F10-Not Enrolled', 4],	[ 'F10-Not Enrolled', 'F11-Not Enrolled', 4],	[ 'F11-Not Enrolled', 'S13-Not Enrolled', 4],	[ 'S13-Not Enrolled', 'S15-Not Enrolled', 4],
+[ 'F09-Engineering Undeclared', 'F10-Engineering Undeclared', 1],	[ 'F10-Engineering Undeclared', 'F11-Electrical Eng & Comp Sci', 1],	[ 'F11-Electrical Eng & Comp Sci', 'S13-Not Enrolled', 1],	[ 'S13-Not Enrolled', 'S15-Not Enrolled', 1],
+[ 'F09-Other COE Major', 'F10-Electrical Eng & Comp Sci', 1],	[ 'F10-Electrical Eng & Comp Sci', 'F11-Electrical Eng & Comp Sci', 1],	[ 'F11-Electrical Eng & Comp Sci', 'S13-Not Enrolled', 1],	[ 'S13-Not Enrolled', 'S15-Not Enrolled', 1],
+[ 'F09-Other COE Major', 'F10-Electrical Eng & Comp Sci', 1],	[ 'F10-Electrical Eng & Comp Sci', 'F11-Not Enrolled', 1],	[ 'F11-Not Enrolled', 'S13-Not Enrolled', 1],	[ 'S13-Not Enrolled', 'S15-Not Enrolled', 1],
+[ 'F09-Other Major', 'F10-Other COE Major', 1],	[ 'F10-Other COE Major', 'F11-Other COE Major', 1],	[ 'F11-Other COE Major', 'S13-Not Enrolled', 1],	[ 'S13-Not Enrolled', 'S15-Electrical Eng & Comp Sci', 1],
+[ 'F09-Electrical Eng & Comp Sci', 'F10-Electrical Eng & Comp Sci', 1],	[ 'F10-Electrical Eng & Comp Sci', 'F11-Not Enrolled', 1],	[ 'F11-Not Enrolled', 'S13-Other Major', 1],	[ 'S13-Other Major', 'S15-Not Enrolled', 1],
+[ 'F09-Electrical Eng & Comp Sci', 'F10-Other Major', 1],	[ 'F10-Other Major', 'F11-Graduated Other', 1],	[ 'F11-Graduated Other', 'S13-Graduated Other', 1],	[ 'S13-Graduated Other', 'S15-Graduated Other', 1],
+[ 'F09-Electrical Eng & Comp Sci', 'F10-Electrical Eng & Comp Sci', 9],	[ 'F10-Electrical Eng & Comp Sci', 'F11-Electrical Eng & Comp Sci', 9],	[ 'F11-Electrical Eng & Comp Sci', 'S13-Graduated EECS', 9],	[ 'S13-Graduated EECS', 'S15-Graduated EECS', 9],
+[ 'F09-Electrical Eng & Comp Sci', 'F10-Multiple Majors', 1],	[ 'F10-Multiple Majors', 'F11-Electrical Eng & Comp Sci', 1],	[ 'F11-Electrical Eng & Comp Sci', 'S13-Graduated EECS', 1],	[ 'S13-Graduated EECS', 'S15-Graduated EECS', 1],
+[ 'F09-Engineering Undeclared', 'F10-Electrical Eng & Comp Sci', 2],	[ 'F10-Electrical Eng & Comp Sci', 'F11-Electrical Eng & Comp Sci', 2],	[ 'F11-Electrical Eng & Comp Sci', 'S13-Graduated EECS', 2],	[ 'S13-Graduated EECS', 'S15-Graduated EECS', 2],
+[ 'F09-Other Major', 'F10-Electrical Eng & Comp Sci', 2],	[ 'F10-Electrical Eng & Comp Sci', 'F11-Electrical Eng & Comp Sci', 2],	[ 'F11-Electrical Eng & Comp Sci', 'S13-Graduated EECS', 2],	[ 'S13-Graduated EECS', 'S15-Graduated EECS', 2],
+[ 'F09-Electrical Eng & Comp Sci', 'F10-Electrical Eng & Comp Sci', 19],	[ 'F10-Electrical Eng & Comp Sci', 'F11-Electrical Eng & Comp Sci', 19],	[ 'F11-Electrical Eng & Comp Sci', 'S13-Graduated EECS', 19],	[ 'S13-Graduated EECS', 'S15-Graduated EECS', 19],
+[ 'F09-Electrical Eng & Comp Sci', 'F10-Electrical Eng & Comp Sci', 1],	[ 'F10-Electrical Eng & Comp Sci', 'F11-Electrical Eng & Comp Sci', 1],	[ 'F11-Electrical Eng & Comp Sci', 'S13-Graduated EECS', 1],	[ 'S13-Graduated EECS', 'S15-Graduated EECS', 1],
+[ 'F09-Engineering Undeclared', 'F10-Electrical Eng & Comp Sci', 2],	[ 'F10-Electrical Eng & Comp Sci', 'F11-Electrical Eng & Comp Sci', 2],	[ 'F11-Electrical Eng & Comp Sci', 'S13-Graduated EECS', 2],	[ 'S13-Graduated EECS', 'S15-Graduated EECS', 2],
+[ 'F09-Engineering Undeclared', 'F10-Engineering Undeclared', 1],	[ 'F10-Engineering Undeclared', 'F11-Electrical Eng & Comp Sci', 1],	[ 'F11-Electrical Eng & Comp Sci', 'S13-Graduated EECS', 1],	[ 'S13-Graduated EECS', 'S15-Graduated EECS', 1],
+[ 'F09-Engineering Undeclared', 'F10-Engineering Undeclared', 1],	[ 'F10-Engineering Undeclared', 'F11-Electrical Eng & Comp Sci', 1],	[ 'F11-Electrical Eng & Comp Sci', 'S13-Graduated EECS', 1],	[ 'S13-Graduated EECS', 'S15-Graduated EECS', 1],
+[ 'F09-Other COE Major', 'F10-Electrical Eng & Comp Sci', 1],	[ 'F10-Electrical Eng & Comp Sci', 'F11-Electrical Eng & Comp Sci', 1],	[ 'F11-Electrical Eng & Comp Sci', 'S13-Graduated EECS', 1],	[ 'S13-Graduated EECS', 'S15-Graduated EECS', 1],
+[ 'F09-Other COE Major', 'F10-Electrical Eng & Comp Sci', 2],	[ 'F10-Electrical Eng & Comp Sci', 'F11-Electrical Eng & Comp Sci', 2],	[ 'F11-Electrical Eng & Comp Sci', 'S13-Graduated EECS', 2],	[ 'S13-Graduated EECS', 'S15-Graduated EECS', 2],
+[ 'F09-Other COE Major', 'F10-Other COE Major', 1],	[ 'F10-Other COE Major', 'F11-Electrical Eng & Comp Sci', 1],	[ 'F11-Electrical Eng & Comp Sci', 'S13-Graduated EECS', 1],	[ 'S13-Graduated EECS', 'S15-Graduated EECS', 1],
+[ 'F09-Other Major', 'F10-Electrical Eng & Comp Sci', 1],	[ 'F10-Electrical Eng & Comp Sci', 'F11-Multiple Majors', 1],	[ 'F11-Multiple Majors', 'S13-Graduated Multiple Majors', 1],	[ 'S13-Graduated Multiple Majors', 'S15-Graduated Multiple Majors', 1],
+[ 'F09-Electrical Eng & Comp Sci', 'F10-Electrical Eng & Comp Sci', 1],	[ 'F10-Electrical Eng & Comp Sci', 'F11-Other COE Major', 1],	[ 'F11-Other COE Major', 'S13-Graduated Other COE', 1],	[ 'S13-Graduated Other COE', 'S15-Graduated Other COE', 1],
+[ 'F09-Engineering Undeclared', 'F10-Engineering Undeclared', 1],	[ 'F10-Engineering Undeclared', 'F11-EECS/NE Joint Major', 1],	[ 'F11-EECS/NE Joint Major', 'S13-Graduated EECS/NE', 1],	[ 'S13-Graduated EECS/NE', 'S15-Graduated EECS/NE', 1],
+[ 'F09-Electrical Eng & Comp Sci', 'F10-EECS/MSE Joint Major', 1],	[ 'F10-EECS/MSE Joint Major', 'F11-Electrical Eng & Comp Sci', 1],	[ 'F11-Electrical Eng & Comp Sci', 'S13-Graduated EECS', 1],	[ 'S13-Graduated EECS', 'S15-Graduated EECS', 1],
+[ 'F09-Electrical Eng & Comp Sci', 'F10-Electrical Eng & Comp Sci', 109],	[ 'F10-Electrical Eng & Comp Sci', 'F11-Electrical Eng & Comp Sci', 109],	[ 'F11-Electrical Eng & Comp Sci', 'S13-Graduated EECS', 109],	[ 'S13-Graduated EECS', 'S15-Graduated EECS', 109],
+[ 'F09-Electrical Eng & Comp Sci', 'F10-Electrical Eng & Comp Sci', 3],	[ 'F10-Electrical Eng & Comp Sci', 'F11-Electrical Eng & Comp Sci', 3],	[ 'F11-Electrical Eng & Comp Sci', 'S13-Graduated EECS', 3],	[ 'S13-Graduated EECS', 'S15-Graduated EECS', 3],
+[ 'F09-Electrical Eng & Comp Sci', 'F10-Electrical Eng & Comp Sci', 1],	[ 'F10-Electrical Eng & Comp Sci', 'F11-Not Enrolled', 1],	[ 'F11-Not Enrolled', 'S13-Graduated EECS', 1],	[ 'S13-Graduated EECS', 'S15-Graduated EECS', 1],
+[ 'F09-Electrical Eng & Comp Sci', 'F10-Electrical Eng & Comp Sci', 1],	[ 'F10-Electrical Eng & Comp Sci', 'F11-Not Enrolled', 1],	[ 'F11-Not Enrolled', 'S13-Graduated EECS', 1],	[ 'S13-Graduated EECS', 'S15-Graduated EECS', 1],
+[ 'F09-Electrical Eng & Comp Sci', 'F10-Not Enrolled', 2],	[ 'F10-Not Enrolled', 'F11-Electrical Eng & Comp Sci', 2],	[ 'F11-Electrical Eng & Comp Sci', 'S13-Graduated EECS', 2],	[ 'S13-Graduated EECS', 'S15-Graduated EECS', 2],
+[ 'F09-Engineering Undeclared', 'F10-Electrical Eng & Comp Sci', 7],	[ 'F10-Electrical Eng & Comp Sci', 'F11-Electrical Eng & Comp Sci', 7],	[ 'F11-Electrical Eng & Comp Sci', 'S13-Graduated EECS', 7],	[ 'S13-Graduated EECS', 'S15-Graduated EECS', 7],
+[ 'F09-Engineering Undeclared', 'F10-Electrical Eng & Comp Sci', 1],	[ 'F10-Electrical Eng & Comp Sci', 'F11-Not Enrolled', 1],	[ 'F11-Not Enrolled', 'S13-Graduated EECS', 1],	[ 'S13-Graduated EECS', 'S15-Graduated EECS', 1],
+[ 'F09-Engineering Undeclared', 'F10-Engineering Undeclared', 4],	[ 'F10-Engineering Undeclared', 'F11-Electrical Eng & Comp Sci', 4],	[ 'F11-Electrical Eng & Comp Sci', 'S13-Graduated EECS', 4],	[ 'S13-Graduated EECS', 'S15-Graduated EECS', 4],
+[ 'F09-Other COE Major', 'F10-Electrical Eng & Comp Sci', 4],	[ 'F10-Electrical Eng & Comp Sci', 'F11-Electrical Eng & Comp Sci', 4],	[ 'F11-Electrical Eng & Comp Sci', 'S13-Graduated EECS', 4],	[ 'S13-Graduated EECS', 'S15-Graduated EECS', 4],
+[ 'F09-Other COE Major', 'F10-Electrical Eng & Comp Sci', 4],	[ 'F10-Electrical Eng & Comp Sci', 'F11-Electrical Eng & Comp Sci', 4],	[ 'F11-Electrical Eng & Comp Sci', 'S13-Graduated EECS', 4],	[ 'S13-Graduated EECS', 'S15-Graduated EECS', 4],
+[ 'F09-Other COE Major', 'F10-Electrical Eng & Comp Sci', 1],	[ 'F10-Electrical Eng & Comp Sci', 'F11-Multiple Majors', 1],	[ 'F11-Multiple Majors', 'S13-Graduated EECS', 1],	[ 'S13-Graduated EECS', 'S15-Graduated EECS', 1],
+[ 'F09-Other COE Major', 'F10-Other COE Major', 1],	[ 'F10-Other COE Major', 'F11-Electrical Eng & Comp Sci', 1],	[ 'F11-Electrical Eng & Comp Sci', 'S13-Graduated EECS', 1],	[ 'S13-Graduated EECS', 'S15-Graduated EECS', 1],
+[ 'F09-Other COE Major', 'F10-Other COE Major', 1],	[ 'F10-Other COE Major', 'F11-Electrical Eng & Comp Sci', 1],	[ 'F11-Electrical Eng & Comp Sci', 'S13-Graduated EECS', 1],	[ 'S13-Graduated EECS', 'S15-Graduated EECS', 1],
+[ 'F09-Other COE Major', 'F10-Other COE Major', 1],	[ 'F10-Other COE Major', 'F11-Other COE Major', 1],	[ 'F11-Other COE Major', 'S13-Graduated EECS', 1],	[ 'S13-Graduated EECS', 'S15-Graduated EECS', 1],
+[ 'F09-Other Major', 'F10-Electrical Eng & Comp Sci', 4],	[ 'F10-Electrical Eng & Comp Sci', 'F11-Electrical Eng & Comp Sci', 4],	[ 'F11-Electrical Eng & Comp Sci', 'S13-Graduated EECS', 4],	[ 'S13-Graduated EECS', 'S15-Graduated EECS', 4],
+[ 'F09-Other Major', 'F10-Electrical Eng & Comp Sci', 1],	[ 'F10-Electrical Eng & Comp Sci', 'F11-Electrical Eng & Comp Sci', 1],	[ 'F11-Electrical Eng & Comp Sci', 'S13-Graduated EECS', 1],	[ 'S13-Graduated EECS', 'S15-Graduated EECS', 1],
+[ 'F09-Other Major', 'F10-Other Major', 1],	[ 'F10-Other Major', 'F11-Electrical Eng & Comp Sci', 1],	[ 'F11-Electrical Eng & Comp Sci', 'S13-Graduated EECS', 1],	[ 'S13-Graduated EECS', 'S15-Graduated EECS', 1],
+[ 'F09-Other Major', 'F10-Other Major', 1],	[ 'F10-Other Major', 'F11-Other COE Major', 1],	[ 'F11-Other COE Major', 'S13-Graduated EECS', 1],	[ 'S13-Graduated EECS', 'S15-Graduated EECS', 1],
+[ 'F09-Electrical Eng & Comp Sci', 'F10-Electrical Eng & Comp Sci', 1],	[ 'F10-Electrical Eng & Comp Sci', 'F11-Electrical Eng & Comp Sci', 1],	[ 'F11-Electrical Eng & Comp Sci', 'S13-Graduated Multiple Majors', 1],	[ 'S13-Graduated Multiple Majors', 'S15-Graduated Multiple Majors', 1],
+[ 'F09-Electrical Eng & Comp Sci', 'F10-Electrical Eng & Comp Sci', 1],	[ 'F10-Electrical Eng & Comp Sci', 'F11-Multiple Majors', 1],	[ 'F11-Multiple Majors', 'S13-Graduated Multiple Majors', 1],	[ 'S13-Graduated Multiple Majors', 'S15-Graduated Multiple Majors', 1],
+[ 'F09-Electrical Eng & Comp Sci', 'F10-Electrical Eng & Comp Sci', 1],	[ 'F10-Electrical Eng & Comp Sci', 'F11-Multiple Majors', 1],	[ 'F11-Multiple Majors', 'S13-Graduated Multiple Majors', 1],	[ 'S13-Graduated Multiple Majors', 'S15-Graduated Multiple Majors', 1],
+[ 'F09-Electrical Eng & Comp Sci', 'F10-Multiple Majors', 1],	[ 'F10-Multiple Majors', 'F11-Multiple Majors', 1],	[ 'F11-Multiple Majors', 'S13-Graduated Multiple Majors', 1],	[ 'S13-Graduated Multiple Majors', 'S15-Graduated Multiple Majors', 1],
+[ 'F09-Engineering Undeclared', 'F10-Electrical Eng & Comp Sci', 1],	[ 'F10-Electrical Eng & Comp Sci', 'F11-Multiple Majors', 1],	[ 'F11-Multiple Majors', 'S13-Graduated Multiple Majors', 1],	[ 'S13-Graduated Multiple Majors', 'S15-Graduated Multiple Majors', 1],
+[ 'F09-Other COE Major', 'F10-Other COE Major', 1],	[ 'F10-Other COE Major', 'F11-Multiple Majors', 1],	[ 'F11-Multiple Majors', 'S13-Graduated Multiple Majors', 1],	[ 'S13-Graduated Multiple Majors', 'S15-Graduated Multiple Majors', 1],
+[ 'F09-Other COE Major', 'F10-Other COE Major', 1],	[ 'F10-Other COE Major', 'F11-Multiple Majors', 1],	[ 'F11-Multiple Majors', 'S13-Graduated Multiple Majors', 1],	[ 'S13-Graduated Multiple Majors', 'S15-Graduated Multiple Majors', 1],
+[ 'F09-Other Major', 'F10-Electrical Eng & Comp Sci', 1],	[ 'F10-Electrical Eng & Comp Sci', 'F11-Multiple Majors', 1],	[ 'F11-Multiple Majors', 'S13-Graduated Multiple Majors', 1],	[ 'S13-Graduated Multiple Majors', 'S15-Graduated Multiple Majors', 1],
+[ 'F09-Other Major', 'F10-Other Major', 1],	[ 'F10-Other Major', 'F11-Multiple Majors', 1],	[ 'F11-Multiple Majors', 'S13-Graduated Multiple Majors', 1],	[ 'S13-Graduated Multiple Majors', 'S15-Graduated Multiple Majors', 1],
+[ 'F09-Electrical Eng & Comp Sci', 'F10-Electrical Eng & Comp Sci', 4],	[ 'F10-Electrical Eng & Comp Sci', 'F11-Electrical Eng & Comp Sci', 4],	[ 'F11-Electrical Eng & Comp Sci', 'S13-Graduated EECS', 4],	[ 'S13-Graduated EECS', 'S15-Graduated EECS', 4],
+[ 'F09-Electrical Eng & Comp Sci', 'F10-Electrical Eng & Comp Sci', 2],	[ 'F10-Electrical Eng & Comp Sci', 'F11-Electrical Eng & Comp Sci', 2],	[ 'F11-Electrical Eng & Comp Sci', 'S13-Graduated EECS', 2],	[ 'S13-Graduated EECS', 'S15-Graduated EECS', 2],
+[ 'F09-Electrical Eng & Comp Sci', 'F10-Other COE Major', 1],	[ 'F10-Other COE Major', 'F11-Other COE Major', 1],	[ 'F11-Other COE Major', 'S13-Graduated Other COE', 1],	[ 'S13-Graduated Other COE', 'S15-Graduated Other COE', 1],
+[ 'F09-Electrical Eng & Comp Sci', 'F10-Electrical Eng & Comp Sci', 1],	[ 'F10-Electrical Eng & Comp Sci', 'F11-Other COE Major', 1],	[ 'F11-Other COE Major', 'S13-Graduated Other COE', 1],	[ 'S13-Graduated Other COE', 'S15-Graduated Other COE', 1],
+[ 'F09-Electrical Eng & Comp Sci', 'F10-Other COE Major', 1],	[ 'F10-Other COE Major', 'F11-Other COE Major', 1],	[ 'F11-Other COE Major', 'S13-Graduated Other COE', 1],	[ 'S13-Graduated Other COE', 'S15-Graduated Other COE', 1],
+[ 'F09-Electrical Eng & Comp Sci', 'F10-Other COE Major', 2],	[ 'F10-Other COE Major', 'F11-Other COE Major', 2],	[ 'F11-Other COE Major', 'S13-Graduated Other COE', 2],	[ 'S13-Graduated Other COE', 'S15-Graduated Other COE', 2],
+[ 'F09-Electrical Eng & Comp Sci', 'F10-Electrical Eng & Comp Sci', 3],	[ 'F10-Electrical Eng & Comp Sci', 'F11-Other Major', 3],	[ 'F11-Other Major', 'S13-Graduated Other', 3],	[ 'S13-Graduated Other', 'S15-Graduated Other', 3],
+[ 'F09-Electrical Eng & Comp Sci', 'F10-Other Major', 1],	[ 'F10-Other Major', 'F11-Other Major', 1],	[ 'F11-Other Major', 'S13-Graduated Other', 1],	[ 'S13-Graduated Other', 'S15-Graduated Other', 1],
+[ 'F09-Electrical Eng & Comp Sci', 'F10-Other Major', 1],	[ 'F10-Other Major', 'F11-Other Major', 1],	[ 'F11-Other Major', 'S13-Graduated Other', 1],	[ 'S13-Graduated Other', 'S15-Graduated Other', 1],
+[ 'F09-Electrical Eng & Comp Sci', 'F10-Electrical Eng & Comp Sci', 1],	[ 'F10-Electrical Eng & Comp Sci', 'F11-EECS/NE Joint Major', 1],	[ 'F11-EECS/NE Joint Major', 'S13-EECS/NE Joint Major', 1],	[ 'S13-EECS/NE Joint Major', 'S15-Graduated EECS/NE', 1],
+[ 'F09-Electrical Eng & Comp Sci', 'F10-Electrical Eng & Comp Sci', 4],	[ 'F10-Electrical Eng & Comp Sci', 'F11-Electrical Eng & Comp Sci', 4],	[ 'F11-Electrical Eng & Comp Sci', 'S13-Electrical Eng & Comp Sci', 4],	[ 'S13-Electrical Eng & Comp Sci', 'S15-Graduated EECS', 4],
+[ 'F09-Electrical Eng & Comp Sci', 'F10-Electrical Eng & Comp Sci', 3],	[ 'F10-Electrical Eng & Comp Sci', 'F11-Electrical Eng & Comp Sci', 3],	[ 'F11-Electrical Eng & Comp Sci', 'S13-Electrical Eng & Comp Sci', 3],	[ 'S13-Electrical Eng & Comp Sci', 'S15-Graduated EECS', 3],
+[ 'F09-Electrical Eng & Comp Sci', 'F10-Not Enrolled', 1],	[ 'F10-Not Enrolled', 'F11-Electrical Eng & Comp Sci', 1],	[ 'F11-Electrical Eng & Comp Sci', 'S13-Electrical Eng & Comp Sci', 1],	[ 'S13-Electrical Eng & Comp Sci', 'S15-Graduated EECS', 1],
+[ 'F09-Engineering Undeclared', 'F10-Engineering Undeclared', 1],	[ 'F10-Engineering Undeclared', 'F11-Electrical Eng & Comp Sci', 1],	[ 'F11-Electrical Eng & Comp Sci', 'S13-Electrical Eng & Comp Sci', 1],	[ 'S13-Electrical Eng & Comp Sci', 'S15-Graduated EECS', 1],
+[ 'F09-Other COE Major', 'F10-Other COE Major', 1],	[ 'F10-Other COE Major', 'F11-Other COE Major', 1],	[ 'F11-Other COE Major', 'S13-Electrical Eng & Comp Sci', 1],	[ 'S13-Electrical Eng & Comp Sci', 'S15-Graduated EECS', 1],
+[ 'F09-Electrical Eng & Comp Sci', 'F10-Electrical Eng & Comp Sci', 2],	[ 'F10-Electrical Eng & Comp Sci', 'F11-Multiple Majors', 2],	[ 'F11-Multiple Majors', 'S13-Multiple Majors', 2],	[ 'S13-Multiple Majors', 'S15-Graduated Multiple Majors', 2],
+[ 'F09-Other COE Major', 'F10-Electrical Eng & Comp Sci', 1],	[ 'F10-Electrical Eng & Comp Sci', 'F11-Electrical Eng & Comp Sci', 1],	[ 'F11-Electrical Eng & Comp Sci', 'S13-Multiple Majors', 1],	[ 'S13-Multiple Majors', 'S15-Graduated Multiple Majors', 1],
+[ 'F09-Other Major', 'F10-Electrical Eng & Comp Sci', 1],	[ 'F10-Electrical Eng & Comp Sci', 'F11-Electrical Eng & Comp Sci', 1],	[ 'F11-Electrical Eng & Comp Sci', 'S13-Multiple Majors', 1],	[ 'S13-Multiple Majors', 'S15-Graduated Multiple Majors', 1],
+[ 'F09-Electrical Eng & Comp Sci', 'F10-Electrical Eng & Comp Sci', 1],	[ 'F10-Electrical Eng & Comp Sci', 'F11-Electrical Eng & Comp Sci', 1],	[ 'F11-Electrical Eng & Comp Sci', 'S13-Other Major', 1],	[ 'S13-Other Major', 'S15-Graduated Other', 1],
+[ 'F09-Electrical Eng & Comp Sci', 'F10-Electrical Eng & Comp Sci', 1],	[ 'F10-Electrical Eng & Comp Sci', 'F11-Other Major', 1],	[ 'F11-Other Major', 'S13-Other Major', 1],	[ 'S13-Other Major', 'S15-Graduated Other', 1],
+[ 'F09-Electrical Eng & Comp Sci', 'F10-Other Major', 1],	[ 'F10-Other Major', 'F11-Other Major', 1],	[ 'F11-Other Major', 'S13-Other Major', 1],	[ 'S13-Other Major', 'S15-Graduated Other', 1],
+[ 'F09-Electrical Eng & Comp Sci', 'F10-Electrical Eng & Comp Sci', 1],	[ 'F10-Electrical Eng & Comp Sci', 'F11-Electrical Eng & Comp Sci', 1],	[ 'F11-Electrical Eng & Comp Sci', 'S13-Electrical Eng & Comp Sci', 1],	[ 'S13-Electrical Eng & Comp Sci', 'S15-Graduated EECS', 1],
+[ 'F09-Electrical Eng & Comp Sci', 'F10-Electrical Eng & Comp Sci', 1],	[ 'F10-Electrical Eng & Comp Sci', 'F11-Not Enrolled', 1],	[ 'F11-Not Enrolled', 'S13-Electrical Eng & Comp Sci', 1],	[ 'S13-Electrical Eng & Comp Sci', 'S15-Graduated EECS', 1],
+[ 'F09-Electrical Eng & Comp Sci', 'F10-Electrical Eng & Comp Sci', 1],	[ 'F10-Electrical Eng & Comp Sci', 'F11-Not Enrolled', 1],	[ 'F11-Not Enrolled', 'S13-Electrical Eng & Comp Sci', 1],	[ 'S13-Electrical Eng & Comp Sci', 'S15-Graduated EECS', 1],
+[ 'F09-Engineering Undeclared', 'F10-Electrical Eng & Comp Sci', 1],	[ 'F10-Electrical Eng & Comp Sci', 'F11-Electrical Eng & Comp Sci', 1],	[ 'F11-Electrical Eng & Comp Sci', 'S13-Not Enrolled', 1],	[ 'S13-Not Enrolled', 'S15-Graduated EECS', 1],
+[ 'F09-Electrical Eng & Comp Sci', 'F10-Electrical Eng & Comp Sci', 1],	[ 'F10-Electrical Eng & Comp Sci', 'F11-Electrical Eng & Comp Sci', 1],	[ 'F11-Electrical Eng & Comp Sci', 'S13-Other Major', 1],	[ 'S13-Other Major', 'S15-Graduated Other', 1],
+[ 'F09-Electrical Eng & Comp Sci', 'F10-Other Major', 1],	[ 'F10-Other Major', 'F11-Other Major', 1],	[ 'F11-Other Major', 'S13-Other Major', 1],	[ 'S13-Other Major', 'S15-Graduated Other', 1],
+[ 'F09-Other Major', 'F10-Electrical Eng & Comp Sci', 1],	[ 'F10-Electrical Eng & Comp Sci', 'F11-Electrical Eng & Comp Sci', 1],	[ 'F11-Electrical Eng & Comp Sci', 'S13-Electrical Eng & Comp Sci', 1],	[ 'S13-Electrical Eng & Comp Sci', 'S15-Graduated EECS', 1],
+[ 'F09-Electrical Eng & Comp Sci', 'F10-Electrical Eng & Comp Sci', 1],	[ 'F10-Electrical Eng & Comp Sci', 'F11-Electrical Eng & Comp Sci', 1],	[ 'F11-Electrical Eng & Comp Sci', 'S13-Not Enrolled', 1],	[ 'S13-Not Enrolled', 'S15-Graduated EECS', 1],
+[ 'F09-Electrical Eng & Comp Sci', 'F10-Electrical Eng & Comp Sci', 1],	[ 'F10-Electrical Eng & Comp Sci', 'F11-Not Enrolled', 1],	[ 'F11-Not Enrolled', 'S13-Not Enrolled', 1],	[ 'S13-Not Enrolled', 'S15-Graduated EECS', 1]
+        ]);
+        // Sets chart options.
+        var options = {
+          width: 1600,
+        };
+        // Instantiates and draws our chart, passing in some options.
+        var chart = new google.visualization.Sankey(document.getElementById('sankey_basic'));
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <h2>EECS - Entering New Freshmen</h2>
+    <h3>Fall 2009 >> Fall 2010 >> Fall 2011 >> Spring 2013 (End of 4th Yr) >> Spring 2015 (End of 6th Yr)</h3>
+        <div id="sankey_basic" style="width: 1700px; height: 600px;"></div>
+  </body>
+</html>
