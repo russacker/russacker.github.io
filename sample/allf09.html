@@ -553,6 +553,13 @@
         // Sets chart options.
         var options = {
           width: 1600,
+          sankey: {
+              link: {
+                color: {
+                  fill: '#99C0E0'
+                }
+              }
+           }
         };
         // Instantiates and draws our chart, passing in some options.
         var chart = new google.visualization.Sankey(document.getElementById('sankey_basic'));
