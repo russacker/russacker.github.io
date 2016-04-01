@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['sankey']});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'From');
+        data.addColumn('string', 'To');
+        data.addColumn('number', 'Weight');
+        data.addRows([
+
+        ]);
+        // Sets chart options.
+        var options = {
+          width: 1600,
+        };
+        // Instantiates and draws our chart, passing in some options.
+        var chart = new google.visualization.Sankey(document.getElementById('sankey_basic'));
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <h2>Clg of Environmental Design - Entering New Freshmen</h2>
+    <h3>Fall 2008 >> Fall 2009 >> Fall 2010 >> Spring 2012 (End of 4th Yr) >> Spring 2014 (End of 5th Yr)</h3>
+        <div id="sankey_basic" style="width: 1700px; height: 600px;"></div>
+    <h3><a href="cedf07.html"></a><< Fall 2008 Cohort >></h3>
+  </body>
+</html>
