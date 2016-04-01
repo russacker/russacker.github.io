@@ -67,6 +67,12 @@
         // Sets chart options.
         var options = {
           width: 1600,
+           sankey: {
+              link: {
+                colorMode: 'gradient',
+                colors: #4682B4
+              }
+           }
         };
         // Instantiates and draws our chart, passing in some options.
         var chart = new google.visualization.Sankey(document.getElementById('sankey_basic'));
