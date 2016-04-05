@@ -13,17 +13,19 @@
 
 <body style="background:#d0d0d0">
 <h1>Test Page</h1>
-<div class="chart-slider" style="text-align:center; width:100px">
+<div style="text-align:center; width:200px">
+  <div class="chart-slider">
 	<ul>
 		<li>Slide 1</li>
 		<li>Slide 2</li>
 		<li>Slide 3</li>
 	</ul>
+  </div>
+  <script>
+	jQuery(document).ready(function($) {
+		$('.chart-slider').unslider();
+	});
+  </script>
 </div>
-<script>
-		jQuery(document).ready(function($) {
-			$('.chart-slider').unslider();
-		});
-</script>
 </body>
 </html>
