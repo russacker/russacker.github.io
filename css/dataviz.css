@@ -2,4 +2,6 @@
 /* CSS Document for russacker.github.io*/
 
 /* Fonts */
-font-family: 'Open Sans', sans-serif;
+body {
+	font-family: 'Open Sans', sans-serif;
+}
