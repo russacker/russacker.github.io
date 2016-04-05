@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>test</title>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+  <link href="../css/dataviz.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="../css/slick.css">
+  <script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script src="../css/slick.min.js"></script>
+</head>
+
+<body style="background:#d0d0d0">
+<div style="width:300px; text-align:center;">
+	<h1>Test Page</h1>
+  <div class="chart-slider">
+	<div>Slide 1</div>
+	<div>Slide 2</div>
+	<div>Slide 3</div>
+  </div>
+  <script>
+    $(document).ready(function(){
+		$('.chart-slider').slick({
+    	dots: true
+		});
+    });
+  </script>
+</div>
+</body>
+</html>
