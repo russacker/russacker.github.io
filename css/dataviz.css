@@ -18,12 +18,18 @@ p.smallitalic {
 
 /* Divs */
 div.container {
-	width:1800px;
-	align-content:center;
-	text-align:center;
+    width:1800px;
+    align-content:center;
+    text-align:center;
 }
 
 div.sankey_raw {
-	width:1620px;
-	height:660px;
+    width:1620px;
+    height:660px;
+}
+
+div.F07Text {
+    font-weight:bold; 
+    position:relative; 
+    left:90px;
 }
