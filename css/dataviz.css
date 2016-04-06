@@ -14,3 +14,16 @@ p.smallitalic {
     font-size: 0.75em;
     font-style: italic;
 }
+
+
+/* Divs */
+div.container {
+	width:1800px;
+	align-content:center;
+	text-align:center;
+}
+
+div.sankey_raw {
+	width:1620px;
+	height:640px;
+}
