@@ -10,6 +10,6 @@ p {
     font-size: 0.875em;
 }
 
-smalltext {
+p.smalltext {
     font-size: 0.5em; /* 14px/16=0.875em */
 }
