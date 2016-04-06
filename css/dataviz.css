@@ -10,6 +10,7 @@ p {
     font-size: 0.875em;
 }
 
-p.smalltext {
-    font-size: 0.5em; /* 14px/16=0.875em */
+p.smallitalic {
+    font-size: 0.65em;
+    font-style: italic;
 }
