@@ -26,58 +26,10 @@ div.containerctr {
     text-align:center;
 }
 
-div.F07Text {
+div.cohorttext {
     font-weight:bold; 
     position:relative; 
-    left:800px;
-}
-
-div.F08Text {
-    font-weight:bold; 
-    position:relative; 
-    left:90px;
-}
-
-div.F09Text {
-    font-weight:bold; 
-    position:relative; 
-    left:90px;
-}
-
-div.F10Text {
-    font-weight:bold; 
-    position:relative; 
-    left:90px;
-}
-
-div.F11Text {
-    font-weight:bold; 
-    position:relative; 
-    left:90px;
-}
-
-div.F12Text {
-    font-weight:bold; 
-    position:relative; 
-    left:90px;
-}
-
-div.F13Text {
-    font-weight:bold; 
-    position:relative; 
-    left:90px;
-}
-
-div.F14Text {
-    font-weight:bold; 
-    position:relative; 
-    left:90px;
-}
-
-div.F15Text {
-    font-weight:bold; 
-    position:relative; 
-    left:90px;
+    left:850px;
 }
 
 div.hdrtext {
