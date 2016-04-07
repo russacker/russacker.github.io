@@ -78,7 +78,6 @@ div.lastnodehdr {
 }
 
 div.nodehdrs {
-    height:100%; 
     width:1800px; 
     overflow: hidden;
     font-size: 0.875em;
