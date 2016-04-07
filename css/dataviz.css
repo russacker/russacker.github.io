@@ -77,6 +77,11 @@ div.lastnodehdr {
     width:100px;
 }
 
+div.imghdr {
+    float:left; 
+    width:510px;
+}
+
 div.nodehdrs {
     width:1800px; 
     overflow: hidden;
@@ -87,6 +92,7 @@ div.sankey_raw {
     width:1800px;
     height:650px;
 }
+
 
 /* Images */
 img.cohortimgleft {
