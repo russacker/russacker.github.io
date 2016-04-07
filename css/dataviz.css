@@ -49,32 +49,27 @@ div.f09text {
 
 div.f10text {
     float:left; 
-    width:139px;
+    width:160px;
 }
 
 div.f11text {
     float:left; 
-    width:152px;
+    width:200px;
 }
 
 div.f12text {
     float:left; 
-    width:165px;
+    width:267px;
 }
 
 div.f13text {
     float:left; 
-    width:178px;
+    width:400px;
 }
 
 div.f14text {
     float:left; 
-    width:191px;
-}
-
-div.f15text {
-    float:left; 
-    width:204px;
+    width:800px;
 }
 
 div.nodehdrs {
