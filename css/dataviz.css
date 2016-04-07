@@ -42,6 +42,41 @@ div.f08text {
     width:113px;
 }
 
+div.f09text {
+    float:left; 
+    width:126px;
+}
+
+div.f10text {
+    float:left; 
+    width:139px;
+}
+
+div.f11text {
+    float:left; 
+    width:152px;
+}
+
+div.f12text {
+    float:left; 
+    width:165px;
+}
+
+div.f13text {
+    float:left; 
+    width:178px;
+}
+
+div.f14text {
+    float:left; 
+    width:191px;
+}
+
+div.f15text {
+    float:left; 
+    width:204px;
+}
+
 div.nodehdrs {
     height:100%; 
     width:1800px; 
