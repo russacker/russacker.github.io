@@ -29,7 +29,7 @@ div.containerctr {
 div.F07Text {
     font-weight:bold; 
     position:relative; 
-    left:90px;
+    left:900px;
 }
 
 div.F08Text {
@@ -82,7 +82,7 @@ div.F15Text {
 
 div.hdrtext {
     float:left; 
-    width:145px;
+    width:100px;
 }
 
 div.nodehdrs {
