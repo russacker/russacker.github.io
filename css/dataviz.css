@@ -39,7 +39,7 @@ div.f07text {
 
 div.f08text {
     float:left; 
-    width:85px;
+    width:115px;
 }
 
 div.nodehdrs {
@@ -51,6 +51,6 @@ div.nodehdrs {
 
 div.sankey_raw {
     width:1800px;
-    height:660px;
+    height:650px;
 }
 
