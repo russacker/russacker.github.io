@@ -26,11 +26,6 @@ div.containerctr {
     text-align:center;
 }
 
-div.sankey_raw {
-    width:1620px;
-    height:660px;
-}
-
 div.F07Text {
     font-weight:bold; 
     position:relative; 
@@ -84,3 +79,21 @@ div.F15Text {
     position:relative; 
     left:90px;
 }
+
+div.hdrtext {
+    float:left; 
+    width:145px;
+}
+
+div.nodehdrs {
+    height:100%; 
+    width:1800px; 
+    overflow: hidden;
+    font-size: 0.875em;
+}
+
+div.sankey_raw {
+    width:1620px;
+    height:660px;
+}
+
