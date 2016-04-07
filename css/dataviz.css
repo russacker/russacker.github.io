@@ -90,7 +90,13 @@ div.sankey_raw {
 }
 
 /* Images */
+img.cohortimgleft {
+    width:552px;
+    height:207px;
+}
+
 img.cohortimg {
     width:552px;
     height:207px;
+    padding-left:25px;
 }
