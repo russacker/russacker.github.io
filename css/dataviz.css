@@ -32,9 +32,14 @@ div.cohorttext {
     left:835px;
 }
 
-div.hdrtext {
+div.f07text {
     float:left; 
     width:100px;
+}
+
+div.f08text {
+    float:left; 
+    width:85px;
 }
 
 div.nodehdrs {
