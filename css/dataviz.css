@@ -6,10 +6,6 @@ body {
 	font-family: 'Open Sans', sans-serif;
 }
 
-h1.h1centered {
-    text-align:center;
-}
-
 p {
     font-size: 0.875em;
 }
@@ -23,6 +19,11 @@ p.smallitalic {
 /* Divs */
 div.container {
     width:1800px;
+}
+
+div.containerctr {
+    width:1800px;
+    text-align:center;
 }
 
 div.sankey_raw {
