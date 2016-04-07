@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>CED Freshmen Cohorts</title>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+  <link href="../css/dataviz.css" rel="stylesheet" type="text/css">
+  <link href="../css/unslider.css" rel="stylesheet" type="text/css">
+  <link href="../css/unslider-dots.css" rel="stylesheet" type="text/css">
+  <script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script src="../css/unslider-min.js"></script>
+</head>
+
+<body>
+<div class="container">
+  <h1>College of Environmental Design - Transfer Student Cohorts</h1>
+  <h3>(<a>Switch to New Freshmen Students</a>)</h3>
+  <div class="chart-slider">
+    <ul>
+      <li><div id="F07" class="sankey_raw">
+        <br/><div class="F07Text">Fall 2007 Cohort</div>
+      </div></li>
+      <li><div id="F08" class="sankey_raw">
+        <br/><div class="F07Text">Fall 2008 Cohort</div>
+      </div></li>
+      <li><div id="F09" class="sankey_raw">
+        <br/><div class="F07Text">Fall 2009 Cohort</div>
+      </div></li>
+      <li><div id="F10" class="sankey_raw">
+        <br/><div class="F07Text">Fall 2010 Cohort</div>
+      </div></li>
+      <li><div id="F11" class="sankey_raw">
+        <br/><div class="F07Text">Fall 2011 Cohort</div>
+      </div></li>
+      <li><div id="F12" class="sankey_raw">
+        <br/><div class="F07Text">Fall 2012 Cohort</div>
+      </div></li>
+      <li><div id="F13" class="sankey_raw">
+        <br/><div class="F07Text">Fall 2013 Cohort</div>
+      </div></li>
+      <li><div id="F14" class="sankey_raw">
+        <br/><div class="F07Text">Fall 2014 Cohort</div>
+      </div></li>
+      <li><div id="F15" class="sankey_raw">
+        <br/><div class="F07Text">Fall 2015 Cohort</div>
+      </div></li>
+    </ul>
+  </div>
+  <script>
+    jQuery(document).ready(function($) {
+    	$('.chart-slider').unslider({
+    	  infinite: true
+    	});
+    });
+  </script>
+</div>
+<hr/>
+<p>Click "Prev" or "Next" (or use your arrow keys) to cycle through cohorts. Click the link at the top of the page to switch between new freshmen and transfer student cohorts.</p>
+<p>Each chart contains all students from that cohort who were ever College of Environmental Design majors, as of end-of-term snapshots.  The "Multiple Majors" category contains students who are both a CED and some other major.  The "Other Major" category contains students who only (as of that term) have majors outside of CED.</p>
+</body>
+</html>
