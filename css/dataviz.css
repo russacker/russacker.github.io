@@ -93,6 +93,12 @@ div.sankey_raw {
     height:650px;
 }
 
+div.treemaps {
+    float: left;
+    width:900px;
+    height:556px;
+}
+
 
 /* Images */
 img.cohortimgleft {
