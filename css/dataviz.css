@@ -17,6 +17,12 @@ p.smallitalic {
 
 
 /* Divs */
+div.cohorttext {
+    font-weight:bold; 
+    position:relative; 
+    left:835px;
+}
+
 div.container {
     width:1800px;
 }
@@ -26,50 +32,9 @@ div.containerctr {
     text-align:center;
 }
 
-div.cohorttext {
-    font-weight:bold; 
-    position:relative; 
-    left:835px;
-}
-
-div.node17hdr {
+div.imghdr {
     float:left; 
-    width:100px;
-}
-
-div.node15hdr {
-    float:left; 
-    width:113px;
-}
-
-div.node13hdr {
-    float:left; 
-    width:133px;
-}
-
-div.node11hdr {
-    float:left; 
-    width:160px;
-}
-
-div.node9hdr {
-    float:left; 
-    width:200px;
-}
-
-div.node7hdr {
-    float:left; 
-    width:267px;
-}
-
-div.node5hdr {
-    float:left; 
-    width:400px;
-}
-
-div.node3hdr {
-    float:left; 
-    width:800px;
+    width:515px;
 }
 
 div.lastnodehdr {
@@ -77,15 +42,50 @@ div.lastnodehdr {
     width:100px;
 }
 
-div.imghdr {
-    float:left; 
-    width:515px;
-}
-
 div.nodehdrs {
     width:1800px; 
     overflow: hidden;
     font-size: 0.875em;
+}
+
+div.node3hdr {
+    float:left; 
+    width:800px;
+}
+
+div.node5hdr {
+    float:left; 
+    width:400px;
+}
+
+div.node7hdr {
+    float:left; 
+    width:267px;
+}
+
+div.node9hdr {
+    float:left; 
+    width:200px;
+}
+
+div.node11hdr {
+    float:left; 
+    width:160px;
+}
+
+div.node13hdr {
+    float:left; 
+    width:133px;
+}
+
+div.node15hdr {
+    float:left; 
+    width:113px;
+}
+
+div.node17hdr {
+    float:left; 
+    width:100px;
 }
 
 div.sankey_raw {
@@ -101,13 +101,14 @@ div.treemaps {
 
 
 /* Images */
-img.cohortimgleft {
-    width:480px;
-    height:180px;
-}
-
 img.cohortimg {
     width:480px;
     height:180px;
     padding-left:30px;
 }
+
+img.cohortimgleft {
+    width:480px;
+    height:180px;
+}
+
