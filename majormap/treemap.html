@@ -5,36 +5,33 @@
     <link href="../css/dataviz.css" rel="stylesheet" type="text/css">
     <title>Tree Map</title>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-<script type="text/javascript">
-google.charts.load('current', {'packages':['treemap']});
-google.charts.setOnLoadCallback(drawChart);
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['treemap']});
+      google.charts.setOnLoadCallback(drawChart);
 
-function drawChart() {
-  var query = new google.visualization.Query(
-      'https://docs.google.com/spreadsheet/tq?key=0AlnCdwvncI3NdHUyQ29RMjF4TmRIcWh5b252cER3eXc&headers=-1');
-  // Send the query with a callback function.
-  query.send(handleQueryResponse);
-}
+      function drawChart() {
+        var query = new google.visualization.Query('https://docs.google.com/spreadsheets/d/11iTIifvvl-YYIO-wJ_N_YH6NubEi8N2auGqQj9Ps8YU/gviz/tq?sheet=UGTree&headers=1');
+        query.send(handleQueryResponse);
+      }
 
-function handleQueryResponse(response) {
-  if (response.isError()) {
-    alert('Error in query: ' + response.getMessage() + ' ' + response.getDetailedMessage());
-    return;
-  }
-
-  var data = response.getDataTable();
-  var tree = new google.visualization.TreeMap(document.getElementById('ugtree_div'));
-  tree.draw(data, {
-    minColor: '#ffcc33',
-    midColor: '#ddd',
-    maxColor: '#010066',
-    headerHeight: 15,
-    fontColor: 'black',
-	minColorValue: 0,
-	maxColorValue: 1,
-    showScale: true});
-}
-</script>
+      function handleQueryResponse(response) {
+        if (response.isError()) {
+          alert('Error in query: ' + response.getMessage() + ' ' + response.getDetailedMessage());
+        return;
+        }
+        var data = response.getDataTable();
+        var tree = new google.visualization.TreeMap(document.getElementById('ugtree_div'));
+        tree.draw(data, {
+          minColor: '#ffcc33',
+          midColor: '#ddd',
+          maxColor: '#010066',
+          headerHeight: 15,
+          fontColor: 'black',
+	  minColorValue: 0,
+	  maxColorValue: 1,
+          showScale: true});
+      }    
+    </script>
   </head>
   <body>
     <h2>Spring 2016 Enrollment by Unit</h2>
