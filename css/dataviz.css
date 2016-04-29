@@ -96,13 +96,15 @@ div.sankey_raw {
 div.treehdrgr {
     float: left;
     width:840px;
-    font-weight:bold; 
+    font-weight:bold;
+    text-align:center;
 }
 
 div.treehdrug {
     float: left;
     width:860px;
     font-weight:bold; 
+    text-align:center;
 }
 
 div.treemaps {
