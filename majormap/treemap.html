@@ -9,9 +9,7 @@
       google.charts.load('current', {'packages':['treemap']});
       google.charts.setOnLoadCallback(drawChart);
       function drawChart() {
-        var queryString = encodeURIComponent('SELECT A, B, C, D');
-
-        var query = new google.visualization.Query('https://docs.google.com/spreadsheets/d/11iTIifvvl-YYIO-wJ_N_YH6NubEi8N2auGqQj9Ps8YU/gviz/tq?sheet=UGTree&headers=1&tq=' + queryString);
+        var query = new google.visualization.Query('https://docs.google.com/spreadsheets/d/11iTIifvvl-YYIO-wJ_N_YH6NubEi8N2auGqQj9Ps8YU/gviz/tq?sheet=UGTree&headers=1');
         query.send(handleSampleDataQueryResponse);
       }
 
