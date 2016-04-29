@@ -9,46 +9,29 @@
       google.charts.load('current', {'packages':['treemap']});
       google.charts.setOnLoadCallback(drawChart);
       function drawChart() {
-        var data = google.visualization.arrayToDataTable([
-          ['Location', 'Parent', 'Market trade volume (size)', 'Market increase/decrease (color)'],
-          ['Global',    null,                 0,                               0],
-          ['America',   'Global',             0,                               0],
-          ['Europe',    'Global',             0,                               0],
-          ['Asia',      'Global',             0,                               0],
-          ['Australia', 'Global',             0,                               0],
-          ['Africa',    'Global',             0,                               0],
-          ['Brazil',    'America',            11,                              10],
-          ['USA',       'America',            52,                              31],
-          ['Mexico',    'America',            24,                              12],
-          ['Canada',    'America',            16,                              -23],
-          ['France',    'Europe',             42,                              -11],
-          ['Germany',   'Europe',             31,                              -2],
-          ['Sweden',    'Europe',             22,                              -13],
-          ['Italy',     'Europe',             17,                              4],
-          ['UK',        'Europe',             21,                              -5],
-          ['China',     'Asia',               36,                              4],
-          ['Japan',     'Asia',               20,                              -12],
-          ['India',     'Asia',               40,                              63],
-          ['Laos',      'Asia',               4,                               34],
-          ['Mongolia',  'Asia',               1,                               -5],
-          ['Israel',    'Asia',               12,                              24],
-          ['Iran',      'Asia',               18,                              13],
-          ['Pakistan',  'Asia',               11,                              -52],
-          ['Egypt',     'Africa',             21,                              0],
-          ['S. Africa', 'Africa',             30,                              43],
-          ['Sudan',     'Africa',             12,                              2],
-          ['Congo',     'Africa',             10,                              12],
-          ['Zaire',     'Africa',             8,                               10]
-        ]);
+        var queryString = encodeURIComponent('SELECT A, B, C, D');
 
+        var query = new google.visualization.Query('https://docs.google.com/spreadsheets/d/11iTIifvvl-YYIO-wJ_N_YH6NubEi8N2auGqQj9Ps8YU/gviz/tq?sheet=UGTree&headers=1&tq=' + queryString);
+        query.send(handleSampleDataQueryResponse);
+      }
+
+      function handleSampleDataQueryResponse(response) {
+        if (response.isError()) {
+          alert('Error in query: ' + response.getMessage() + ' ' + response.getDetailedMessage());
+        return;
+        }
+
+        var data = response.getDataTable();
         tree = new google.visualization.TreeMap(document.getElementById('ugtree_div'));
 
         tree.draw(data, {
-          minColor: '#f00',
+          minColor: '#ffcc33',
           midColor: '#ddd',
-          maxColor: '#0d0',
+          maxColor: '#010066',
           headerHeight: 15,
           fontColor: 'black',
+	      minColorValue: 0,
+	      maxColorValue: 1,
           showScale: true
         });
       }
@@ -56,9 +39,8 @@
   </head>
   <body>
     <h2>Spring 2016 Enrollment by Unit</h2>
-    <p>These treemaps show UC Berkeley's most recent Spring semester undergraduate enrollment by academic unit.  The size of each box indicates the total headcount of students within that academic unit (note that due to the nature of a treemap, these headcounts will include some duplication for double/triple majors).  The color of each box represents the growth rate over the past 5 years for that unit; <span style="color:#FF9933; font-weight:bold;">darker gold indicates a negative growth rate</span>, <span style="color:#010066; font-weight:bold;">darker blue indicates a positive growth rate</span>, and <span style="color:#666666; font-weight:bold;">gray indicates a relatively small change</span>.</p>
+    <p>These treemaps show UC Berkeley's most recent Spring semester enrollment by academic unit.  The size of each box indicates the total headcount of students within that academic unit (note that due to the nature of a treemap, these headcounts will include some duplication for double/triple majors).  The color of each box represents the growth rate over the past 5 years for that unit; <span style="color:#FF9933; font-weight:bold;">darker gold indicates a negative growth rate</span>, <span style="color:#010066; font-weight:bold;">darker blue indicates a positive growth rate</span>, and <span style="color:#666666; font-weight:bold;">gray indicates a relatively small change</span>.</p>
 <p>Where your mouse cursor appears as a hand, you can left-click to see more detail for that unit.  Right-click to move back up a level.</p>
     <div id="ugtree_div" style="width: 900px; height: 500px;"></div>
   </body>
 </html>
-
