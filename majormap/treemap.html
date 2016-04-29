@@ -23,7 +23,7 @@ function handleQueryResponse(response) {
   }
 
   var data = response.getDataTable();
-  var tree = new google.visualization.TreeMap(document.getElementById('chart_div'));
+  var tree = new google.visualization.TreeMap(document.getElementById('ugtree_div'));
   tree.draw(data, {
     minColor: '#ffcc33',
     midColor: '#ddd',
