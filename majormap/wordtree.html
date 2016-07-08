@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,700italic" rel="stylesheet" type="text/css">
+    <link href="../css/dataviz.css" rel="stylesheet" type="text/css">
+    <title>Tree Maps</title>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['treemap']});
+      google.charts.setOnLoadCallback(drawUGTree);
+      google.charts.setOnLoadCallback(drawGRTree);
+      function drawUGTree() {
+        var query = new google.visualization.Query('https://docs.google.com/spreadsheets/d/11iTIifvvl-YYIO-wJ_N_YH6NubEi8N2auGqQj9Ps8YU/gviz/tq?sheet=UGTree&headers=1');
+        query.send(handleQueryResponse);
+        function handleQueryResponse(response) {
+          if (response.isError()) {
+            alert('Error in query: ' + response.getMessage() + ' ' + response.getDetailedMessage());
+          return;
+          }
+          var data = response.getDataTable();
+          var tree = new google.visualization.TreeMap(document.getElementById('ugtree_div'));
+          tree.draw(data, {
+            minColor: '#FFF7E6',
+            midColor: '#FDBE35',
+            maxColor: '#976802',
+            headerHeight: 20,
+            fontColor: 'black',
+            showScale: true});
+        }
+	  }    
+	  
+      function drawGRTree() {
+        var query = new google.visualization.Query('https://docs.google.com/spreadsheets/d/11iTIifvvl-YYIO-wJ_N_YH6NubEi8N2auGqQj9Ps8YU/gviz/tq?sheet=GRTree&headers=1');
+        query.send(handleQueryResponse);
+        function handleQueryResponse(response) {
+          if (response.isError()) {
+            alert('Error in query: ' + response.getMessage() + ' ' + response.getDetailedMessage());
+          return;
+          }
+          var data = response.getDataTable();
+          var tree = new google.visualization.TreeMap(document.getElementById('grtree_div'));
+          tree.draw(data, {
+            minColor: '#FFF7E6',
+            midColor: '#FDBE35',
+            maxColor: '#976802',
+            headerHeight: 20,
+            fontColor: 'black',
+            showScale: true});
+        }
+	  }	  
+    </script>
+  </head>
+  <body>
+    <h2>Spring 2016 Enrollment by Unit</h2>
+    <p>These treemaps show UC Berkeley's most recent Spring semester enrollment by academic unit.  The size of each box indicates the total headcount of students within that academic unit.  The color of each box represents the absolute growth over the past 5 years for that unit; lighter gold indicates lower or negative growth rate, while darker gold indicates larger positive growth. (Note that due to the nature of these multilevel treemaps, we aren't able to base the color on percentage growth, although we do show that growth rate in the labels and tooltip text.  In addition, these headcounts will include some duplication for double/triple majors.)</p>
+<p>Where your mouse cursor appears as a hand, you can left-click to see more detail for that unit.  Right-click to move back up a level.</p><br/>
+    <div class="container">
+      <div class="treehdrug">Undergraduates</div>
+      <div class="treehdrgr">Graduate Students</div>
+      <div id="ugtree_div" class="treemaps"></div>
+      <div id="grtree_div" class="treemaps"></div>
+    </div>
+  </body>
+</html>
