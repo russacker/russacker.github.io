@@ -113,6 +113,13 @@ div.treemaps {
     height:525px;
 }
 
+div.wordtreeug {
+    float: left;
+    width:1800px;
+    font-weight:bold; 
+    text-align:center;
+}
+
 
 /* Images */
 img.cohortimg {
