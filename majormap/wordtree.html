@@ -6,11 +6,11 @@
     <title>Word Trees</title>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
-      google.charts.load('current', {'packages':['treemap']});
+      google.charts.load('current', {'packages':['wordtree']});
       google.charts.setOnLoadCallback(drawUGTree);
-      google.charts.setOnLoadCallback(drawGRTree);
+//      google.charts.setOnLoadCallback(drawGRTree);
       function drawUGTree() {
-        var query = new google.visualization.Query('https://docs.google.com/spreadsheets/d/11iTIifvvl-YYIO-wJ_N_YH6NubEi8N2auGqQj9Ps8YU/gviz/tq?sheet=UGTree&headers=1');
+        var query = new google.visualization.Query('https://docs.google.com/spreadsheets/d/11iTIifvvl-YYIO-wJ_N_YH6NubEi8N2auGqQj9Ps8YU/gviz/tq?sheet=UGWord&headers=1');
         query.send(handleQueryResponse);
         function handleQueryResponse(response) {
           if (response.isError()) {
@@ -18,14 +18,12 @@
           return;
           }
           var data = response.getDataTable();
-          var tree = new google.visualization.TreeMap(document.getElementById('ugtree_div'));
-          tree.draw(data, {
-            minColor: '#FFF7E6',
-            midColor: '#FDBE35',
-            maxColor: '#976802',
-            headerHeight: 20,
-            fontColor: 'black',
-            showScale: true});
+          var wordtree = new google.visualization.WordTree(document.getElementById('ugtree_div'));
+          wordtree.draw(data, {
+            colors: ['black', 'black', 'black'],
+          wordtree: {
+            format: 'explicit',
+            type: 'suffix'});
         }
 	  }    
 	  
