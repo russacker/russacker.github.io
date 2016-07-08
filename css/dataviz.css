@@ -101,7 +101,7 @@ div.treehdrgr {
 }
 
 div.treehdrug {
-    float: left;
+/*    float: left; */
     width:860px;
     font-weight:bold; 
     text-align:center;
