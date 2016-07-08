@@ -101,7 +101,7 @@ div.treehdrgr {
 }
 
 div.treehdrug {
-/*    float: left; */
+    float: left;
     width:860px;
     font-weight:bold; 
     text-align:center;
@@ -116,6 +116,13 @@ div.treemaps {
 div.wordtrees {
     width:1750px;
     height:800px;
+}
+
+div.wordtreehdrug {
+    width:850px;
+    font-weight:bold; 
+    text-align:center;
+    color:blue;
 }
 
 
