@@ -118,6 +118,13 @@ div.wordtrees {
     height:800px;
 }
 
+div.wordtreehdrgr {
+    width:850px;
+    font-weight:bold; 
+    text-align:left;
+    color:blue;
+}
+
 div.wordtreehdrug {
     width:850px;
     font-weight:bold; 
