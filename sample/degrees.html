@@ -3,30 +3,31 @@
   <head>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
-      google.charts.load('current', {'packages':['table']});
-      google.charts.setOnLoadCallback(drawTable);
-      function drawTable() {
-        var data = new google.visualization.DataTable();
-        data.addColumn('string', 'DegLevel');
-        data.addColumn('string', '2011-12');
-        data.addColumn('string', '2012-13');
-        data.addColumn('string', '2013-14');
-        data.addColumn('string', '2014-15');
-        data.addColumn('string', '2015-16');
-        data.addColumn('number', 'Recipients');
-        data.addRows([
-          ['Bachelor', 7313,7594,7360,7434,7300],
-          ['Masters/Prof', 2488,2517,2565,2681,3026],
-          ['Doctoral', 892,937,936,826,819]
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Year', 'Sales', 'Expenses'],
+          ['2013',  1000,      400],
+          ['2014',  1170,      460],
+          ['2015',  660,       1120],
+          ['2016',  1030,      540]
         ]);
-        // Instantiates and draws our table, passing in some options.
-        var table = new google.visualization.Table(document.getElementById('table_div'));
-        table.draw(data, {showRowNumber: false, width: '800px', height: '100%'});
+
+        var options = {
+          title: 'Company Performance',
+          hAxis: {title: 'Year',  titleTextStyle: {color: '#333'}},
+          vAxis: {minValue: 0}
+        };
+
+        var chart = new google.visualization.AreaChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
       }
     </script>
   </head>
   <body>
     <h2>Degree Recipients</h2>
-    <div id="table_div"></div>
+    <div id="chart_div" style="width: 100%; height: 500px;"></div>
   </body>
 </html>
