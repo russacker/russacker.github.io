@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,700italic" rel="stylesheet" type="text/css">
+    <link type="text/css" rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" media="all" />
+    <link type="text/css" rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Serif+Pro:400,600,700" media="all" />
     <link href="../css/dataviz.css" rel="stylesheet" type="text/css">
-    <title>Tree Maps</title>
+    <title>UC Berkeley Enrollment History</title>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
       google.charts.load('current', {'packages':['treemap']});
-      google.charts.setOnLoadCallback(drawUGTree);
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawArea);
       google.charts.setOnLoadCallback(drawGRTree);
-      function drawUGTree() {
-        var query = new google.visualization.Query('https://docs.google.com/spreadsheets/d/11iTIifvvl-YYIO-wJ_N_YH6NubEi8N2auGqQj9Ps8YU/gviz/tq?sheet=UGTree&headers=1');
+	    
+      function drawArea() {
+        var query = new google.visualization.Query('https://docs.google.com/spreadsheets/d/1I66OvCapkMSSVpcW-mRK1F0O6N1nqKEDFI5tKaLZqmw/gviz/tq?sheet=EnrollLvlGender&headers=1');
         query.send(handleQueryResponse);
         function handleQueryResponse(response) {
           if (response.isError()) {
@@ -18,16 +21,14 @@
           return;
           }
           var data = response.getDataTable();
-          var tree = new google.visualization.TreeMap(document.getElementById('ugtree_div'));
-          tree.draw(data, {
-            minColor: '#FFF7E6',
-            midColor: '#FDBE35',
-            maxColor: '#976802',
-            headerHeight: 20,
-            fontColor: 'black',
-            showScale: true});
-        }
-	  }    
+          var options = {
+          title: 'Company Performance',
+          hAxis: {title: 'Year',  titleTextStyle: {color: '#333'}},
+          vAxis: {minValue: 0}
+          };
+        var chart = new google.visualization.AreaChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+      };    
 	  
       function drawGRTree() {
         var query = new google.visualization.Query('https://docs.google.com/spreadsheets/d/11iTIifvvl-YYIO-wJ_N_YH6NubEi8N2auGqQj9Ps8YU/gviz/tq?sheet=GRTree&headers=1');
@@ -51,13 +52,13 @@
     </script>
   </head>
   <body>
-    <h2>Spring 2016 Enrollment by Unit</h2>
+    <h2>Spring 2016 Enrollment by Unit - 1</h2>
     <p>These treemaps show UC Berkeley's most recent Spring semester enrollment by academic unit.  The size of each box indicates the total headcount of students within that academic unit.  The color of each box represents the absolute growth over the past 5 years for that unit; lighter gold indicates lower or negative growth rate, while darker gold indicates larger positive growth. (Note that due to the nature of these multilevel treemaps, we aren't able to base the color on percentage growth, although we do show that growth rate in the labels and tooltip text.  In addition, these headcounts will include some duplication for double/triple majors.)</p>
 <p>Where your mouse cursor appears as a hand, you can left-click to see more detail for that unit.  Right-click to move back up a level.</p><br/>
     <div class="container">
       <div class="treehdrug">Undergraduates</div>
       <div class="treehdrgr">Graduate Students</div>
-      <div id="ugtree_div" class="treemaps"></div>
+      <div id="chart_div"></div>
       <div id="grtree_div" class="treemaps"></div>
     </div>
   </body>
