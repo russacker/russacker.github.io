@@ -22,13 +22,18 @@
       }
 
       var data = response.getDataTable();
-      var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
-      chart.draw(data, { height: 400 });
+      var options = {
+          title: 'Company Performance',
+          hAxis: {title: 'Year',  titleTextStyle: {color: '#333'}},
+          vAxis: {minValue: 0}
+      };
+      var chart = new google.visualization.AreaChart(document.getElementById('chart_div'));
+      chart.draw(data, options);
     }  
     </script>
   </head>
   <body>
-    <h1>UC Berkeley Enrollment History - 3</h1>
+    <h1>UC Berkeley Enrollment History - 4</h1>
     <div id="chart_div" style="width: 100%; height: 500px;"></div>
   </body>
 </html>
