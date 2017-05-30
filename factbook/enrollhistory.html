@@ -7,9 +7,29 @@
     <title>UC Berkeley Enrollment History</title>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
-      google.charts.load('current', {'packages':['corechart']});
+      google.charts.load('current', {'packages':['corechart','table']});
       google.charts.setOnLoadCallback(drawArea);
 
+      google.charts.setOnLoadCallback(drawTable);
+
+      function drawTable() {
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Name');
+        data.addColumn('number', 'Salary');
+        data.addColumn('boolean', 'Full Time Employee');
+        data.addRows([
+          ['Mike',  {v: 10000, f: '$10,000'}, true],
+          ['Jim',   {v:8000,   f: '$8,000'},  false],
+          ['Alice', {v: 12500, f: '$12,500'}, true],
+          ['Bob',   {v: 7000,  f: '$7,000'},  true]
+        ]);
+
+        var table = new google.visualization.Table(document.getElementById('table_div'));
+
+        table.draw(data, {showRowNumber: true, width: '100%', height: '100%'});
+      }
+
+      
       function drawArea() {
         var query = new google.visualization.Query('https://docs.google.com/spreadsheets/d/1I66OvCapkMSSVpcW-mRK1F0O6N1nqKEDFI5tKaLZqmw/gviz/tq?sheet=EnrollLvlGender&headers=1');
       query.send(handleDataQueryResponse);
@@ -35,7 +55,8 @@
     </script>
   </head>
   <body>
-    <h1>UC Berkeley Enrollment History - 15</h1>
+    <h1>UC Berkeley Enrollment History - 16</h1>
     <div id="chart_div" style="width: 100%; height: 600px;"></div>
+    <div id="table_div" style="width: 100%; height: 100%;"></div>
   </body>
 </html>
