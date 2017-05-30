@@ -12,26 +12,23 @@
 
       function drawArea() {
         var query = new google.visualization.Query('https://docs.google.com/spreadsheets/d/1I66OvCapkMSSVpcW-mRK1F0O6N1nqKEDFI5tKaLZqmw/gviz/tq?sheet=Test&headers=1');
-        query.send(handleQueryResponse);
-        function handleQueryResponse(response) {
-          if (response.isError()) {
-            alert('Error in query: ' + response.getMessage() + ' ' + response.getDetailedMessage());
-          return;
-          }
-          var data = response.getDataTable();
-          var options = {
-          title: 'Company Performance',
-          hAxis: {title: 'Year',  titleTextStyle: {color: '#333'}},
-          vAxis: {minValue: 0}
-        };
+      query.send(handleDataQueryResponse);
+    }
 
-        var chart = new google.visualization.AreaChart(document.getElementById('chart_div'));
-        chart.draw(data, options);
-	  }  
+    function handleDataQueryResponse(response) {
+      if (response.isError()) {
+        alert('Error in query: ' + response.getMessage() + ' ' + response.getDetailedMessage());
+        return;
+      }
+
+      var data = response.getDataTable();
+      var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
+      chart.draw(data, { height: 400 });
+    }  
     </script>
   </head>
   <body>
-    <h1>UC Berkeley Enrollment History - 2</h1>
+    <h1>UC Berkeley Enrollment History - 3</h1>
     <div id="chart_div" style="width: 100%; height: 500px;"></div>
   </body>
 </html>
