@@ -25,7 +25,8 @@
       var options = {
           title: 'UC Berkeley',
           hAxis: {title: 'Year/Fall Term',  titleTextStyle: {color: '#333'}},
-          vAxis: {minValue: 0}
+          vAxis: {minValue: 0},
+          isStacked: true
       };
       var chart = new google.visualization.AreaChart(document.getElementById('chart_div'));
       chart.draw(data, options);
@@ -33,7 +34,7 @@
     </script>
   </head>
   <body>
-    <h1>UC Berkeley Enrollment History - 6</h1>
+    <h1>UC Berkeley Enrollment History - 7</h1>
     <div id="chart_div" style="width: 100%; height: 600px;"></div>
   </body>
 </html>
