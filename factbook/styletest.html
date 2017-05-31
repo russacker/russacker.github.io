@@ -50,6 +50,40 @@ jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":
       document.createElement('footer');
    </script>
   <![endif]-->
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart','table']});
+      google.charts.setOnLoadCallback(drawCharts);
+      
+      function drawCharts() {
+        var query = new google.visualization.Query('https://docs.google.com/spreadsheets/d/1I66OvCapkMSSVpcW-mRK1F0O6N1nqKEDFI5tKaLZqmw/gviz/tq?sheet=EnrollLvlGender&headers=1');
+      query.send(handleDataQueryResponse);
+    }
+    function handleDataQueryResponse(response) {
+      if (response.isError()) {
+        alert('Error in query: ' + response.getMessage() + ' ' + response.getDetailedMessage());
+        return;
+      }
+      var data = response.getDataTable();
+      
+      var areaOptions = {
+          title: 'UC Berkeley Enrollment by Student Level and Gender, 1869 - Present',
+          hAxis: {title: 'Academic Year Totals Through 1964; Fall Totals Since 1965',  titleTextStyle: {color: '#333'}, format: '#', gridlines: {count: 15}},
+          vAxis: {minValue: 0},
+          isStacked: true,
+          explorer: {actions: ['dragToZoom', 'rightClickToReset'], keepInBounds: true, axis: 'horizontal'}
+      };
+      var area = new google.visualization.AreaChart(document.getElementById('chart_div'));
+      area.draw(data, areaOptions);
+      
+      var tableOptions = {
+          sortColumn: 0, 
+          sortAscending: false
+      };
+      var table = new google.visualization.Table(document.getElementById('table_div'));
+      table.draw(data, tableOptions);
+    }  
+    </script>
 </head>
 <body class="html not-front not-logged-in no-sidebars page-node page-node- page-node-760 node-type-openberkeley-content-page region-content panel-layout-radix_boxton panel-region-contentmain no-slogan has-legacy-footer site-name-normal site-name-option-two" >
 <div id="skip-link"> <a href="#main" class="element-invisible element-focusable">Skip to main content</a> </div>
@@ -110,10 +144,10 @@ jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":
                                 <div class="field field-name-body field-type-text-with-summary field-label-hidden">
                                   <div class="field-items">
                                     <div class="field-item even">
-                                      <h1>UC Berkeley Fall Enrollment Data</h1>
-                                      <h4><strong>New Freshman Enrollment by Ethnicity</strong></h4>
-                                      <table>
-                                      </table>
+<p>This chart and table show total enrollment at the University of California, Berkeley, by student level and gender, since the university's first class in 1869.</p>
+<p>You can click and drag to highlight an area of the chart in order to zoom in. Right-click the chart to zoom back out. You can also click the column headers in the table to sort by those columns.</p><br/>
+    <div id="chart_div" style="width: 100%; height: 600px;"></div>
+<div id="table_div" style="width: 100%; height: 100%;"></div>
                                     </div>
                                   </div>
                                 </div>
