@@ -71,7 +71,8 @@ jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":
           hAxis: {title: 'Academic Year Totals Through 1964; Fall Totals Since 1965',  titleTextStyle: {color: '#333'}, format: '#', gridlines: {count: 15}},
           vAxis: {minValue: 0},
           isStacked: true,
-          explorer: {actions: ['dragToZoom', 'rightClickToReset'], keepInBounds: true, axis: 'horizontal'}
+          explorer: {actions: ['dragToZoom', 'rightClickToReset'], keepInBounds: true, axis: 'horizontal'}, 
+          colors: ['#00B0DA','#00A598','#003262','#FDB515','#3B7EA1','#C4820E']
       };
       var area = new google.visualization.AreaChart(document.getElementById('chart_div'));
       area.draw(data, areaOptions);
