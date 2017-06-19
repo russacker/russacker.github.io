@@ -6,6 +6,7 @@
     <link href="../css/dataviz.css" rel="stylesheet" type="text/css">
     <title>UC Berkeley Enrollment History</title>
     
+<!-- Google Charts scripts -->
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
       google.charts.load('current', {'packages':['corechart','table']});
@@ -59,12 +60,13 @@
     </script>
     
   </head>
-  <body>
+<body>
 <h1>UC Berkeley Enrollment History - 24</h1>
-<p>This chart and table show total enrollment at the University of California, Berkeley, by student level and gender, since the university's first class in 1869.</p>
+<p>This chart and table show total enrollment at the University of California, Berkeley, by student level and gender, since the university's first entering class in 1869.</p>
 <p>You can click and drag to highlight an area of the chart in order to zoom in. Right-click the chart to zoom back out. You can also click the column headers in the table to sort by those columns.</p>
-<br/>
 <div id="chart_div" style="width: 100%; height: 600px;"></div>
 <div id="table_div" style="width: 100%; height: 100%; text-align: center;"></div>
-  </body>
+<br/>
+<small>Data Sources: Data for years prior to 1965 comes from <a href="http://content.cdlib.org/view?docId=hb4v19n9zb&&doc.view=entire_text" rel="noreferrer">The Centennial Record of the University of California, 1868-1968</a> with a few minor corrections. From 1965 through 1982, we've used internal files maintained by UC Berkeley's former Office of Student Research.  From 1983 to the present, we've used data from UC Berkeley's data warehouse reporting system, <a href="http://calanswers.berkeley.edu/" rel="noreferrer">Cal Answers</a>.  Prior to 1965, these are unduplicated academic year headcounts, so anyone enrolled at any point during the year is counted as one.  Since then, these values represent the official student census count for the Fall quarter (1966-1982) or Fall semester (1983-present).</small> </div>
+</body>
 </html>
