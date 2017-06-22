@@ -9,12 +9,11 @@
 <!-- Google Charts scripts -->
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
-
       google.charts.load('current', {'packages':['corechart','table']});
       google.charts.setOnLoadCallback(drawAreaChart);
-      google.charts.setOnLoadCallback(drawTableChart);
+	  google.charts.setOnLoadCallback(drawTableChart);
       
-    function drawAreaChart() {
+      function drawAreaChart() {
         var queryString = encodeURIComponent('SELECT A, B, F, D, C, H, G');
         var query = new google.visualization.Query('https://docs.google.com/spreadsheets/d/1I66OvCapkMSSVpcW-mRK1F0O6N1nqKEDFI5tKaLZqmw/gviz/tq?sheet=EnrollLvlGender&headers=1&tq=' + queryString);
         query.send(handleAreaQueryResponse);
@@ -38,7 +37,7 @@
         var area = new google.visualization.AreaChart(document.getElementById('chart_div'));
         area.draw(data, areaOptions);
 	  }
-
+      
 	  function drawTableChart() {
         var query = new google.visualization.Query('https://docs.google.com/spreadsheets/d/1I66OvCapkMSSVpcW-mRK1F0O6N1nqKEDFI5tKaLZqmw/gviz/tq?sheet=EnrollLvlGender&headers=1');
         query.send(handleTableQueryResponse);
@@ -62,7 +61,7 @@
     
   </head>
 <body>
-<h1>UC Berkeley Enrollment History - 25</h1>
+<h1>UC Berkeley Enrollment History - 24</h1>
 <p>This chart and table show total enrollment at the University of California, Berkeley, by student level and gender, since the university's first entering class in 1869.</p>
 <p>You can click and drag to highlight an area of the chart in order to zoom in. Right-click the chart to zoom back out. You can also click the column headers in the table to sort by those columns.</p>
 <div id="chart_div" style="width: 100%; height: 600px;"></div>
