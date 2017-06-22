@@ -21,7 +21,7 @@
     
 	  function handleAreaQueryResponse(response) {
         if (response.isError()) {
-          alert('Error in query: ' + response.getMessage() + ' ' + response.getDetailedMessage());
+          alert('Error in Area query: ' + response.getMessage() + ' ' + response.getDetailedMessage());
           return;
         }
         var data = response.getDataTable();
@@ -45,7 +45,7 @@
     
 	  function handleTableQueryResponse(response) {
         if (response.isError()) {
-          alert('Error in query: ' + response.getMessage() + ' ' + response.getDetailedMessage());
+          alert('Error in Table query: ' + response.getMessage() + ' ' + response.getDetailedMessage());
           return;
         }
         var data = response.getDataTable();
