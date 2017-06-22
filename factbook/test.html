@@ -51,6 +51,31 @@ jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":
    </script>
   <![endif]-->
 
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Year', 'Sales', 'Expenses'],
+          ['2013',  1000,      400],
+          ['2014',  1170,      460],
+          ['2015',  660,       1120],
+          ['2016',  1030,      540]
+        ]);
+
+        var options = {
+          title: 'Company Performance',
+          hAxis: {title: 'Year',  titleTextStyle: {color: '#333'}},
+          vAxis: {minValue: 0}
+        };
+
+        var chart = new google.visualization.AreaChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+      }
+    </script>
+        
     </head>
     <body class="html not-front not-logged-in no-sidebars page-node page-node- page-node-760 node-type-openberkeley-content-page region-content panel-layout-radix_boxton panel-region-contentmain no-slogan has-legacy-footer site-name-normal site-name-option-two" >
 <div id="skip-link"> <a href="#main" class="element-invisible element-focusable">Skip to main content</a> </div>
