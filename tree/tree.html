@@ -32,7 +32,7 @@
   </head>
 
   <body>
-	  <h3>Tree 2</h3>
+	  <h3>Tree 3</h3>
 <!-- load the d3.js library -->	
 <script src="http://d3js.org/d3.v3.min.js"></script>
 	
@@ -102,7 +102,7 @@ function update(source) {
 	  links = tree.links(nodes);
 
   // Normalize for fixed-depth.
-  nodes.forEach(function(d) { d.y = d.depth * 180; });
+  nodes.forEach(function(d) { d.y = d.depth * 90; });
 
   // Update the nodes…
   var node = svg.selectAll("g.node")
